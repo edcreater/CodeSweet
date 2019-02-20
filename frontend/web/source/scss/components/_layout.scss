@@ -1,0 +1,66 @@
+.page {
+  // Heading
+  &__heading {
+    background: $colorDark;
+    color: #fff;
+    margin-bottom: 35px;
+    background: url("../../img/page-heading-bg.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+
+
+  // Content layout
+  &__content {
+    &--fullwidth {
+
+    }
+    &--sideright {
+
+    }
+  }
+}
+
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  &__inner {
+    background: url(../../img/pattern.png);
+    background-repeat: repeat;
+    background-color: rgba(0,0,0,.3);
+    padding: 30px 0;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $colorPrimary;
+    position: relative;
+  }
+  &__subtitle {
+    font-family: $fontCursive;
+    font-size: 1.5rem;
+  }
+  &__breadcrumbs {
+    padding-top: 60px;
+  }
+
+}
+
+/**
+ * Layout
+ */
+.layout-sideright {
+  display: flex;
+  flex-flow: row wrap;
+  &__content {
+    flex: 0 0 70%;
+    width: 70%;
+  }
+  &__sidebar {
+    padding-left: 30px;
+    flex: 0 0 30%;
+    width: 30%;
+  }
+}

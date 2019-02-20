@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /blog/?ArticleSearch*
+Host: https://codesweet.ru
+Sitemap: https://codesweet.ru/sitemap.xml

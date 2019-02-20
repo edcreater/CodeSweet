@@ -1,0 +1,49 @@
+
+// width
+@mixin r($width) {
+	@media only screen and (max-width: $width+ "px") {
+		@content;
+	}
+}
+
+@import "variables";
+
+@import "libs/normalize-scss/normalize";
+@include normalize();
+
+@import "libs/bourbon/bourbon";
+
+// Core
+@import "core/base";
+@import "core/commons";
+@import "core/fonts";
+
+// Components
+@import "components/content";
+@import "components/inputs";
+@import "components/buttons";
+@import "components/layout";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/home";
+@import "blocks/about-section";
+@import "blocks/inline-subscribe";
+@import "blocks/works-box";
+@import "blocks/articles-box";
+@import "blocks/team-box";
+
+
+
+//base
+@import "project/footer";
+
+// Sidebar
+@import "project/sidebar/widgets";
+@import "project/sidebar/article-categories";
+
+@import "project/breadcrumbs";
+@import "project/blog-grid";
+
+
+

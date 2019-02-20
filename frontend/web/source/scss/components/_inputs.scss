@@ -1,0 +1,47 @@
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: 0.9285714285714286rem;
+  font-family: $fontFamilyHeadings;
+  line-height: 1.4;
+  color: #495057;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.form-input {
+  outline: none;
+  transition: all 0.4s;
+  color: $colorText;
+  font-size: 0.9285714285714286rem;
+  font-family: $fontFamilyHeadings;
+  padding: 1.3rem 1.5rem;
+  width: 100%;
+  line-height: 1;
+  border: 0;
+
+  @include placeholder {
+    font-weight: 400;
+    opacity: 1;
+    color: #a7a3a3;
+    transition: opacity 0.5s;
+    font-family: $fontFamilyBase;
+  }
+  &:focus {
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.form-textarea {
+  resize: none;
+  height: 65px;
+}

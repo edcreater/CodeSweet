@@ -1,0 +1,26 @@
+/**
+ * Buttons
+ */
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 8px 13px 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+  &--primary {
+    color: #fff;
+    background: $colorPrimary;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      background: $colorDark;
+    }
+  }
+}

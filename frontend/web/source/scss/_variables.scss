@@ -1,0 +1,32 @@
+//Susy configuration
+//Documentation http://susydocs.oddbird.net/en/latest/
+
+$img: "../img/"; //images path
+$fonts: "../fonts/"; //fonts path
+
+//Basic project styles
+$primaryFont: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+
+$fontSizeBase: 16px;
+
+$colorBg: #f2f2f1;
+$colorPrimary: #e9446e;
+$colorSecondary: #e9446e;
+$colorSecondary: #52a7ff;
+
+$colorDark: #3d4255;
+
+$colorText: #73737b;
+
+
+
+$fontFamilyBase: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+$fontFamilyHeadings: 'Intro', 'Arial', 'Helvetica', sans-serif;
+$colorHeadings: #333;
+
+$fontCursive: 'Caveat', cursive;
+$secondaryMenuColor: #ada08e;
+
+$colorLink: $colorPrimary;
+$colorLinkHover: darken($colorPrimary, 10%);
+$colorBorder: #8c92a7;

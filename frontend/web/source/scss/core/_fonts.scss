@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic');
+
+$fa-font-path: "../fonts/fontawesome" !default;
+@import "../libs/fontawesome-free-5.3.1-web/scss/fontawesome";
+@import "../libs/fontawesome-free-5.3.1-web/scss/regular";
+@import "../libs/fontawesome-free-5.3.1-web/scss/solid";
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introblack-webfont.woff2') format('woff2'),
+  url('../../fonts/introblack-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introbold-webfont.woff2') format('woff2'),
+  url('../../fonts/introbold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introbook-webfont.woff2') format('woff2'),
+  url('../../fonts/introbook-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introregular-webfont.woff2') format('woff2'),
+  url('../../fonts/introregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introlight-webfont.woff2') format('woff2'),
+  url('../../fonts/introlight-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../../fonts/introthin-webfont.woff2') format('woff2'),
+  url('../../fonts/introthin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}

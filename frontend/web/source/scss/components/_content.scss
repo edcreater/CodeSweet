@@ -1,0 +1,103 @@
+/**
+ * Global Content
+ */
+
+.content {
+  h1,h2,h3,h4,h5,h6 {
+    color: $colorPrimary;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0 0 0 20px;
+    li {
+      list-style-type: none;
+      padding: 0 0 10px 20px;
+      text-decoration: none;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background: $colorPrimary;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list 1;
+    padding-left: 1rem;
+    li {
+      list-style: none;
+      padding: 0 0 0 30px;
+      margin-bottom: 10px;
+      position: relative;
+      &:before {
+        counter-increment: list;
+        content: counter(list) ". ";
+        color: #ff5145;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-weight: 600
+      }
+    }
+  }
+
+  pre {
+    margin-bottom: 2rem!important;
+  }
+  code {
+    font-size: 0.9rem;
+    background: $colorBg;
+    color: $colorPrimary;
+    padding: 3px 5px;
+  }
+
+  blockquote {
+    background: $colorBg;
+    border-left: 5px solid $colorPrimary;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    margin: 0 0 2rem 2rem;
+  }
+
+  .content-theme-bg {
+    background: $colorPrimary;
+    color: #fff;
+    padding: 3px 7px;
+  }
+  .content-light-bg {
+    color: $colorPrimary;
+    background: $colorBg;
+    padding: 3px 7px;
+  }
+  .content-theme-color {
+    color: $colorPrimary;
+  }
+
+  .box-info {
+    background: $colorBg;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+  }
+  &__name {
+    background: $colorSecondary;
+    padding: 3px 5px;
+    color: #fff;
+  }
+  &__url {
+    color: $colorSecondary;
+    font-weight: bold;
+  }
+
+}
