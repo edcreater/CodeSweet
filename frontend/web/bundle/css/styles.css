@@ -5148,6 +5148,17 @@ readers do not read off random characters that represent icons */
       color: #fff;
       background: #3d4255; }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  transition: .2s ease-in-out; }
+  .wrapper__content {
+    flex: 1 0 auto; }
+  .wrapper__footer {
+    flex: 0 0 auto; }
+
 .page__heading {
   background: #3d4255;
   color: #fff;
