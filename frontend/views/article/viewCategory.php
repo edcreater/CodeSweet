@@ -1,17 +1,23 @@
 <?php
 use yii\widgets\Breadcrumbs;
+use yii\widgets\LinkPager;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
 
-if ($seofields->seotitle) {
-    $this->title = $seofields->seotitle;
-} else {
-    $this->title = $model->title;
+/**
+ * Seo metatags
+ */
+$this->title = ( $seofields->seotitle ) ? $seofields->seotitle : $model->title;
+if ( $seofields->seodescription ) {
+	$this->registerMetaTag([
+		'name' => 'description',
+		'content' => $seofields->seodescription
+	]);
 }
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('frontend', 'Articles'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $model->title;
 ?>
 <section class="page__heading page-heading">
     <div class="page-heading__inner">
@@ -37,6 +43,43 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php echo $model->body ?>
 
             </div>
+
+            <div class="blog-grid">
+		        <?php
+		        /*
+				echo \yii\widgets\ListView::widget([
+					'dataProvider' => $dataProvider,
+					'pager' => [
+						'hideOnSinglePage' => true,
+					],
+					'itemView' => '_item'
+				])
+				*/
+		        ?>
+		        <?php
+		        if ($articles)  {
+			        foreach ($articles as $article) {
+				        echo $this->render('_item', [
+					        'model' => $article,
+				        ]);
+			        }
+		        }
+		        ?>
+            </div>
+
+            <div class="pagination__outer">
+		        <?php
+		        echo LinkPager::widget([
+			        'pagination' => $pages,
+			        'maxButtonCount' => 15,
+			        // Отключаю ссылку "Следующий"
+			        'nextPageLabel' => false,
+			        // Отключаю ссылку "Предыдущий"
+			        'prevPageLabel' => false,
+		        ]);
+		        ?>
+            </div>
+
         </div>
     </div>
 </div>
