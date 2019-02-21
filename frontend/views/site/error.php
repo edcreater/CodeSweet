@@ -9,6 +9,8 @@ use yii\helpers\Html;
 
 $this->title = $name;
 
+$this->params['breadcrumbs'][] = $this->title;
+
 if ($exception->statusCode == '404') {
 	$this->title = \common\widgets\DbText::widget([
 		'key' => '404-title'
@@ -25,6 +27,7 @@ if ($exception->statusCode == '404') {
 
         <div class="container">
             <h1 class="page-heading__title"><?php echo Html::encode($this->title) ?></h1>
+            <p class="page-heading__subtitle">Упс, возникла проблема</p>
             <div class="page-heading__breadcrumbs">
 				<?php echo Breadcrumbs::widget([
 					'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
