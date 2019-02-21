@@ -3,10 +3,10 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 //$this->title = Yii::$app->name;
-$this->title = 'CodeSweet - Разработка, оптимизация, поддержка сайтов';
+$this->title = 'CodeSweet | Разработка, оптимизация, поддержка сайтов';
 \Yii::$app->view->registerMetaTag([
     'name' => 'description',
-    'content' => 'Команда разработчиков codesweet.ru - разработка сайтов с уникальным дизайном и продуманным функционалом. А также дальнейшая техподдержка и сопровождение.'
+    'content' => 'Команда разработчиков CodeSweet - разработка сайтов с уникальным дизайном и продуманным функционалом. А также дальнейшая техподдержка и сопровождение.'
 ]);
 \Yii::$app->view->registerMetaTag([
     'property' => 'og:type',
