@@ -45,6 +45,10 @@ class ArticleController extends Controller
 	    $articles = $query->offset($pages->offset)->limit($pages->limit)->orderBy('created_at desc')->all();
 
 	    return $this->render('index', [
+		    'seotitle' => 'CodeSweet | Статьи о веб-разработке',
+		    'seodescription' => 'Полезные статьи о веб разработке. создании сайтов и не только',
+		    'title' => 'Статьи',
+		    'subtitle' => 'Здесь мы будем делиться с вами новостями и полезными штуками',
 		    'articles' => $articles,
 		    'pages' => $pages
 	    ]);

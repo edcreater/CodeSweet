@@ -7,6 +7,9 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 
+/**
+ * Seo metatags
+ */
 $this->title = $seotitle;
 $this->registerMetaTag([
 	'name' => 'description',

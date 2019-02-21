@@ -7,13 +7,20 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
 
-$this->title = Yii::t('frontend', 'Articles')
+/**
+ * Seo metatags
+ */
+$this->title = $seotitle;
+$this->registerMetaTag([
+	'name' => 'description',
+	'content' => $seodescription
+]);
 ?>
 <section class="page__heading page-heading">
     <div class="page-heading__inner">
         <div class="container">
-            <h1 class="page-heading__title"><?php echo $this->title; ?></h1>
-            <p class="page-heading__subtitle"><?php echo 'Здесь мы будем делиться с вами новостями и разными штуками'; ?></p>
+            <h1 class="page-heading__title"><?php echo $title; ?></h1>
+            <p class="page-heading__subtitle"><?php echo $subtitle; ?></p>
         </div>
     </div>
 </section>
