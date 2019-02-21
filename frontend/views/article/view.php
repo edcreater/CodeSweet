@@ -4,10 +4,15 @@ use yii\widgets\Breadcrumbs;
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
 
-if ($seofields->seotitle) {
-    $this->title = $seofields->seotitle;
-} else {
-    $this->title = $model->title;
+/**
+ * Seo metatags
+ */
+$this->title = ( $seofields->seotitle ) ? $seofields->seotitle : $model->title;
+if ( $seofields->seodescription ) {
+	$this->registerMetaTag([
+		'name' => 'description',
+		'content' => $seofields->seodescription
+	]);
 }
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('frontend', 'Articles'), 'url' => ['index']];

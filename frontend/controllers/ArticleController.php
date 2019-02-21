@@ -64,13 +64,11 @@ class ArticleController extends Controller
 
         $seofields = $model->seofield;
 
-        \Yii::$app->view->registerMetaTag([
-            'name' => 'description',
-            'content' => $seofields->seodescription
-        ]);
-
         $viewFile = $model->view ?: 'view';
-        return $this->render($viewFile, ['model' => $model, 'seofields'=>$seofields]);
+        return $this->render($viewFile, [
+        	'model' => $model,
+	        'seofields'=>$seofields
+        ]);
     }
 
     /**
