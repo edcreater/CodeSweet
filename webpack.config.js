@@ -1,13 +1,15 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports  = {
     entry: {
-        app: path.resolve(__dirname, './frontend/web/js/app.js'),
-        style: path.resolve(__dirname, './frontend/web/css/style.less'),
+        app: path.resolve(__dirname, './frontend/web/source/js/app.js'),
+        styles: path.resolve(__dirname, './frontend/web/source/scss/styles.scss'),
     },
     output: {
-        filename: '[name].js',
+        filename: 'js/[name].js',
+		    publicPath: '/',
         path: path.resolve(__dirname, './frontend/web/bundle'),
     },
     module: {
@@ -18,31 +20,61 @@ module.exports  = {
                 use: [
                     {
                         loader: 'babel-loader',
-                        options: { presets: ['latest'] }
+                        options: { presets: ['@babel/preset-env'] }
                     }
                 ]
             },
             {
-                test: /\.less$/,
-                use: ExtractTextPlugin.extract({
-                    use: [
-                        {loader: 'css-loader', options: {minimize: true, sourceMap: true}},
-                        {
-                            loader: "less-loader",
-                            options: {
-                                minimize: true,
-                                sourceMap: true
-                            }
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
                         }
-                    ]
-                })
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 5000,
+                        name: 'images/[name].[ext]',
+                    }
+                },
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'fonts/',
+                        name: '[name].[ext]',
+                        publicPath: '../fonts/'
+                    }
+                }
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin({
-            filename: "[name].css",
-            allChunks: true
+        new CleanPlugin('./frontend/web/bundle'),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css"
         })
     ],
     devtool: 'source-map'

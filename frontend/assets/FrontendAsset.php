@@ -26,18 +26,14 @@ class FrontendAsset extends AssetBundle
      * @var array
      */
     public $css = [
-        'style.css',
 	    'css/styles.css',
-	    'libs/prism/prism.css'
     ];
 
     /**
      * @var array
      */
     public $js = [
-        'js/default.js',
-        'libs/isotope.pkgd.min.js',
-        'libs/prism/prism.js',
+        'js/app.js',
     ];
 
     /**

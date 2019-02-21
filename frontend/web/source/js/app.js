@@ -1,3 +1,5 @@
+import 'prismjs/prism';
+
 (function ($) {
     $(document).ready(function () {
 
@@ -30,8 +32,5 @@
     $(window).on('resize', function(){
 
     });
-
-
-
 
 })(jQuery);
