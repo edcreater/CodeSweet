@@ -8,7 +8,11 @@ use yii\widgets\LinkPager;
 /**
  * Seo metatags
  */
-$this->title = ( $seofields->seotitle ) ? $seofields->seotitle : $model->title;
+if ( $seofields->seotitle ) {
+	$this->title = \Yii::$app->name . ' | ' . $seofields->seotitle;
+} else {
+	$this->title = \Yii::$app->name . ' | ' . $model->seotitle;
+}
 if ( $seofields->seodescription ) {
 	$this->registerMetaTag([
 		'name' => 'description',
