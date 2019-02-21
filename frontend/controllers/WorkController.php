@@ -50,6 +50,10 @@ class WorkController extends Controller
         $works = $query->offset($pages->offset)->limit($pages->limit)->orderBy('created_at desc')->all();
 
         return $this->render('index', [
+        	'seotitle' => 'CodeSweet | Наше портфолио - мы создаем сайты быстро и качественно',
+            'seodescription' => 'Портфолио от команды разработчиков CodeSweet. Выполненные проекты по созданию сайтов',
+            'title' => 'Посмотрите наше портфолио',
+            'subtitle' => 'Мы постарались выполнить эти проекты качественно',
             'works' => $works,
             'pages' => $pages
         ]);

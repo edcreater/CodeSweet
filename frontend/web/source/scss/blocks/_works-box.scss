@@ -23,7 +23,7 @@
     background: $colorPrimary;
     padding: 15px 20px 20px 20px;
     line-height: 1.1;
-    transform: translateY(100%);
+    transform: translateY(0);
     transition: 0.3s ease-in-out;
     font-weight: bold;
     &:after {
@@ -60,7 +60,7 @@
 
   &:hover {
     #{$this}__title {
-      transform: translateY(0);
+      transform: translateY(100%);
     }
     #{$this}__thumb {
       img {
