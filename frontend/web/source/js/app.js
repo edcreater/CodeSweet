@@ -22,7 +22,14 @@ import 'prismjs/prism';
                 }
             });
             $(this).html(strResult);
-        })
+        });
+
+        $('.developments-list-item').mouseenter(function(){
+            $('#developments-list__clipper-hover')[0].beginElement();
+        });
+        $('.developments-list-item').mouseleave(function(){
+            $('#developments-list__clipper-unhover')[0].beginElement();
+        });
     });
 
     $(window).on('load', function(){

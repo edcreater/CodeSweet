@@ -11,21 +11,20 @@ use yii\helpers\Html;
     <div class="developments-list-item__inner">
 
         <div class="developments-list-item__thumb">
-            <div class="developments-list-item__thumb-wrap">
 		    <?php if ($model->thumbnail_path): ?>
 			    <?php $thumb = Html::img(
-				    Yii::$app->glide->createSignedUrl([
+				    Yii::getAlias('@storageUrl') . '/thumbs/' . $model->thumbnail_path,
+				    /*Yii::$app->glide->createSignedUrl([
 					    'glide/index',
 					    'path' => $model->thumbnail_path,
 					    'w' => 460,
                         'h' => 320,
                         'fit' => 'crop'
-				    ], true),
+				    ], true),*/
 				    ['class' => 'img-fluid']
 			    ) ?>
 			    <?php echo Html::a($thumb, ['view', 'category'=>$model->category->slug, 'slug'=>$model->slug]) ?>
 		    <?php endif; ?>
-            </div>
         </div>
 
         <div class="developments-list-item__content">

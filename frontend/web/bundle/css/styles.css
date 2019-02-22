@@ -6061,27 +6061,41 @@ readers do not read off random characters that represent icons */
     margin-bottom: 30px; }
 
 .developments-list-item {
-  background: #fff;
   transition: 0.2s ease-in-out; }
   .developments-list-item__inner {
     position: relative;
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    align-items: center; }
   .developments-list-item__thumb {
-    background: #000;
     backface-visibility: hidden;
-    position: relative; }
-    .developments-list-item__thumb img {
-      transition: opacity .35s, transform .35s;
-      height: auto;
-      width: 100%; }
-  .developments-list-item__thumb-wrap {
     position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-    width: 100%; }
+    padding: 10px;
+    z-index: 0;
+    max-width: 520px;
+    flex: 0 0 520px; }
+    .developments-list-item__thumb img {
+      height: auto;
+      width: 100%;
+      clip-path: url("#developments-list__clipper");
+      transition: 0.2s ease-in-out;
+      position: relative;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+    .developments-list-item__thumb:after {
+      content: "";
+      clip-path: url("#developments-list__clipper");
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; }
   .developments-list-item__content {
-    padding: 20px; }
+    margin-left: 40px; }
   .developments-list-item__meta {
     margin-bottom: 10px; }
   .developments-list-item__heading {
@@ -6095,10 +6109,6 @@ readers do not read off random characters that represent icons */
     margin: 0;
     font-size: .875em;
     line-height: 1.1; }
-  .developments-list-item:hover .developments-list-item__thumb img {
-    opacity: .5;
-    transform: scale(1.1);
-    transition: all .3s ease-in-out; }
 
 /**
  * Blog grid item meta
