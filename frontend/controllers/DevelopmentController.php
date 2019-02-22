@@ -50,6 +50,10 @@ class DevelopmentController extends Controller
         $developments = $query->offset($pages->offset)->limit($pages->limit)->orderBy('created_at desc')->all();
 
         return $this->render('index', [
+	        'seotitle'       => 'CodeSweet | Наши разработки',
+	        'seodescription' => 'Наши разработки: плагины, модули, шаблоны и прочее',
+	        'title'          => 'Наши разработки',
+	        'subtitle'       => 'Плагины, модули, шаблоны и прочие плюшки',
             'developments' => $developments,
             'pages' => $pages
         ]);

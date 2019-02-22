@@ -7,11 +7,11 @@ use yii\helpers\Html;
 
 ?>
 
-<div class="blog-grid__item blog-grid-item">
-    <div class="blog-grid-item__inner">
+<div class="developments-list__item developments-list-item">
+    <div class="developments-list-item__inner">
 
-        <div class="blog-grid-item__thumb">
-            <div class="blog-grid-item__thumb-wrap">
+        <div class="developments-list-item__thumb">
+            <div class="developments-list-item__thumb-wrap">
 		    <?php if ($model->thumbnail_path): ?>
 			    <?php $thumb = Html::img(
 				    Yii::$app->glide->createSignedUrl([
@@ -26,21 +26,24 @@ use yii\helpers\Html;
 			    <?php echo Html::a($thumb, ['view', 'category'=>$model->category->slug, 'slug'=>$model->slug]) ?>
 		    <?php endif; ?>
             </div>
+        </div>
 
-            <div class="blog-grid-item__meta blog-grid-meta">
-                <div class="blog-grid-meta__item">
-                    <span class="blog-grid-meta__ico">
+        <div class="developments-list-item__content">
+
+            <div class="developments-list-item__meta developments-list-meta">
+                <div class="developments-list-meta__item">
+                    <span class="developments-list-meta__ico">
                         <i class="far fa-calendar"></i>
                     </span>
-                    <span class="blog-grid-meta__label">
+                    <span class="developments-list-meta__label">
                         <?php echo Yii::$app->formatter->asDate($model->created_at) ?>
                     </span>
                 </div>
-                <div class="blog-grid-meta__item">
-                   <span class="blog-grid-meta__ico">
+                <div class="developments-list-meta__item">
+                   <span class="developments-list-meta__ico">
                         <i class="far fa-newspaper"></i>
                     </span>
-                    <span class="blog-grid-meta__label">
+                    <span class="developments-list-meta__label">
                     <?php echo Html::a(
                         $model->category->title,
                         ['index', 'DevelopmentSearch[category_id]' => $model->category_id]
@@ -49,14 +52,15 @@ use yii\helpers\Html;
                 </div>
             </div>
 
-        </div>
+            <div class="developments-list-item__heading">
+                <h2 class="developments-list-item__title"><?php echo $model->title; ?></h2>
+                <p class="developments-list-item__subtitle"><?php echo $model->subtitle; ?></p>
+            </div>
 
-        <div class="blog-grid-item__heading">
-            <h2 class="blog-grid-item__title">
-		        <?php echo $model->title; ?>
-            </h2>
-            <p class="blog-grid-item__subtitle"><?php echo $model->subtitle; ?></p>
-        </div>
+            <div class="developments-list-item__buttons">
+                <a href="#" class="btn btn--primary">Подробности</a>
+            </div>
 
+        </div>
     </div>
 </div>

@@ -25,6 +25,12 @@
 @import "components/buttons";
 @import "components/layout";
 
+//base
+@import "project/footer";
+@import "project/sidebar/widgets";
+@import "project/sidebar/article-categories";
+@import "project/breadcrumbs";
+
 // Blocks
 @import "blocks/header";
 @import "blocks/home";
@@ -33,18 +39,8 @@
 @import "blocks/works-box";
 @import "blocks/articles-box";
 @import "blocks/team-box";
+@import "blocks/blog-grid";
+@import "blocks/developments-list";
 
-
-
-//base
-@import "project/footer";
-
-// Sidebar
-@import "project/sidebar/widgets";
-@import "project/sidebar/article-categories";
-
-@import "project/breadcrumbs";
-@import "project/blog-grid";
-
-
-
+// Pages
+@import "pages/developments";
