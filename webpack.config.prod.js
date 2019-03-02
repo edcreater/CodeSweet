@@ -1,16 +1,25 @@
 const path = require('path');
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
-const CleanPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports  = {
     entry: {
-        app: path.resolve(__dirname, './frontend/web/source/js/app.js'),
-        styles: path.resolve(__dirname, './frontend/web/source/scss/styles.scss'),
+        app: path.resolve(__dirname, './frontend/web/source/js/app.js')
     },
     output: {
         filename: 'js/[name].js',
 		    publicPath: '/',
         path: path.resolve(__dirname, './frontend/web/bundle'),
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
     },
     module: {
         rules: [
@@ -36,13 +45,13 @@ module.exports  = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: false
                         }
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: false
                         }
                     }
                 ],

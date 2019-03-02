@@ -26,7 +26,7 @@ class FrontendAsset extends AssetBundle
      * @var array
      */
     public $css = [
-	    'css/styles.css',
+	    'css/app.css',
     ];
 
     /**
@@ -44,8 +44,4 @@ class FrontendAsset extends AssetBundle
         //BootstrapAsset::class,
         Html5shiv::class,
     ];
-
-	public $publishOptions = [
-		'forceCopy'=>true,
-	];
 }
