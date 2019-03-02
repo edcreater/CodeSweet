@@ -5,161 +5,88 @@
 
   &__inner {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: space-between;
   }
 
-  &__socials {
+  &__contacts {
     text-align: right;
-    margin-left: auto;
   }
 }
 
-.topmenu {
-  ul {
-    display: block;
-    margin: 1px 0 0;
-    padding: 0;
+/**
+ * Header contacts
+ */
+.header-phone {
+  padding-top: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+
+  &__icon {
+    fill: $colorDark;
+    margin-right: 5px;
   }
 
-  li {
-    list-style: none;
-    display: block;
-    float: left;
-    margin: 0 10px;
+  &__tel {
+    font-weight: 700;
+    font-family: $fontFamilyHeadings;
+    line-height: 1;
+    text-decoration: none;
 
-    &.menu-item-has-children {
-      position: relative;
-    }
-
-    &:hover {
-      a {
-        text-decoration: none;
-        background: url(../img/menu-corner.png) top right no-repeat #ff5145;
-        color: #fff;
-        transition: background-color 0.3s ease-in-out;
-      }
-
-      p.sub {
-        color: #fff;
-      }
-    }
-
-    &.menu-item-has-children:hover .sub-menu {
-      height: auto;
-      opacity: 1;
-    }
-
-    .sub-menu {
-      height: 0;
-      overflow: hidden;
-      opacity: 0;
-      position: absolute;
-      z-index: 10;
-      min-width: 150px;
-      padding-top: 0;
-      margin: 0;
-      top: 115px;
-      left: 0;
-      background: url(../img/submenu-top.png) top left repeat-x;
-      transition: opacity 0.3s ease-in-out;
-
-      li {
-        margin: 3px 0 0;
-        width: 100%;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-
-        &:first-child {
-          margin-top: 8px;
-        }
-      }
-
-      a {
-        height: auto;
-        background: #fff;
-        text-transform: none;
-        padding: 4% 20px;
-        color: #333;
-        font-size: 13px;
-        transition: none;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: #ff5145;
-          color: #fff;
-        }
-      }
-
-      p.strong {
-        margin: 0;
-      }
-
-      p.sub {
-        display: none;
-      }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
     }
   }
+}
 
-  a {
-    height: 115px;
-    vertical-align: middle;
-    display: block;
-    padding: 40px 10px;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #333;
-    box-sizing: border-box;
-  }
-
-  p.strong {
-    margin: 0;
-  }
-
-  p.sub {
-    text-transform: none;
-    font-size: 13px;
-    color: #9e9e9e;
-    padding-top: 5px;
-    display: inline-block;
-  }
+.header-time {
+  color: #9e9e9e;
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 /**
  * Socials
  */
 .socials {
-  a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-top: 37.5px;
-    margin-bottom: 37.5px;
+  }
+
+  &__ico {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
     margin-left: 5px;
+    background: $colorPrimary;
+    border-radius: 50%;
 
-    &.ico-vk {
-      background: url(../img/ico-vk.png) no-repeat;
-
-      &:hover {
-        background-position: 0 -40px;
-      }
-    }
-
-    &.ico-fb {
-      background: url(../img/ico-fb.png) no-repeat;
-
-      &:hover {
-        background-position: 0 -40px;
-      }
-    }
-
-    &.mobile-button {
-      display: none;
-      background: url(../img/mobile-button.png) center center no-repeat;
+    .icon {
+      display: block;
+      fill: #fff;
     }
   }
 }
 
 .logo {
+  &__thumb {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+
   &__title {
     padding-top: 10px;
     font-family: $fontFamilyHeadings;
@@ -190,6 +117,41 @@
     &:focus,
     &:active {
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    &__inner {
+      padding-top: 10px;
+    }
+
+    &__logo {
+      order: 1;
+    }
+
+    &__contacts {
+      order: 2;
+    }
+
+    &__menu {
+      max-width: 100%;
+      flex: 0 0 100%;
+      order: 3;
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__inner {
+      padding: 15px 0 20px;
+    }
+
+    &__menu {
+      display: none;
     }
   }
 }

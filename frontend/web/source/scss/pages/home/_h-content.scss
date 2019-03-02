@@ -1,0 +1,59 @@
+/**
+ * About section
+ */
+.h-content {
+  $this: &;
+
+  &__title {
+    font-family: $fontFamilyHeadings;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &--1 {
+    padding: 100px 0 140px;
+
+    #{$this}__text {
+      padding-left: 30px;
+    }
+  }
+
+  &--2 {
+    padding: 120px 0 180px;
+
+    #{$this}__content {
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .h-content {
+    $this: &;
+
+    text-align: center;
+
+    &--1 {
+      #{$this}__text {
+        padding-left: 0;
+      }
+
+      #{$this}__thumb {
+        margin: 0 auto;
+      }
+    }
+
+    &--2 {
+      #{$this}__text {
+        padding-right: 0;
+      }
+
+      #{$this}__thumb {
+        margin: 0 auto;
+      }
+    }
+  }
+}

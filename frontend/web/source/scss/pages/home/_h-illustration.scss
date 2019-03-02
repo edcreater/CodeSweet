@@ -1,0 +1,140 @@
+.h-illustration {
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 220px;
+  background: url("../img/city.png") center bottom no-repeat;
+  min-height: 520px;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    background: url("../img/h-illustration-arrow.png") top right no-repeat;
+    width: 756px;
+    height: 123px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  &__description {
+    max-width: 30%;
+    flex: 0 0 30%;
+    background: $colorPrimary;
+    border-bottom: 5px solid #d7d7d7;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    h3 {
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    strong {
+      display: block;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  &__iconbox {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+}
+
+// Iconbox
+.iconbox {
+  $this: &;
+
+  padding-left: 10px;
+
+  &__item {
+    border-bottom: 0;
+    border-left: 5px solid #d7d7d7;
+    padding: 0 10px;
+    background: $colorPrimary;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    height: 46px;
+
+    .icon {
+      fill: #fff;
+      width: 26px;
+      height: 26px;
+      display: block;
+    }
+
+    &:hover {
+      #{$this}__item-icon {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__item-icon {
+    transition: transform 0.55s, transform 0.55s;
+    margin-right: 10px;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .h-illustration {
+    &__description {
+      max-width: 40%;
+      flex: 0 0 40%;
+    }
+
+    &__iconbox {
+      max-width: 30%;
+      flex: 0 0 30%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .h-illustration {
+    &__description {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+
+    &__iconbox {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .h-illustration {
+    &__description {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+
+    &__iconbox {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding-left: 0;
+    }
+  }
+}

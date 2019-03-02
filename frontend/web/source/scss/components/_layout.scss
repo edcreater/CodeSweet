@@ -88,3 +88,38 @@
     }
   }
 }
+
+.grid {
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -20px;
+
+    &--vertical-center {
+      align-items: center;
+    }
+  }
+
+  &__column {
+    padding: 0 20px;
+
+    &--12 {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    &__column {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

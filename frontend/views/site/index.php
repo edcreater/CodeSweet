@@ -35,8 +35,7 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
         <div class="h-illustration__inner">
 
             <div class="h-illustration__description">
-                <h3><strong>Разработка сайта</strong> это<br>
-                    не сложно!</h3>
+                <h3><strong>Разработка сайта</strong> это не сложно!</h3>
                 <p>Мы не просто занимаемся штамповкой веб-приложений, мы стремимся сделать интернет пространство лучше, безопасней и удобней.</p>
             </div>
 
@@ -139,10 +138,10 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
 
 <section class="h-services">
     <div class="h-services__bg-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
-            <path class="shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
-            <path class="shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 220" preserveAspectRatio="none">
+            <path class="shape-fill" d="M555 164L0 95V220H1920V133L1595 162L1335 83L555 164Z" />
+            <path class="shape-fill" d="M553 165L0 61V220H1920V101L1596 161L1127 70L553 165Z" fill-opacity="0.66" />
+            <path class="shape-fill" d="M553 169L0 22V220H1920V69L1547 176L953 76L553 169Z" fill-opacity="0.33" />
         </svg>
     </div>
 
@@ -232,35 +231,28 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
     </div>
 
     <div class="h-services__bg-bottom">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
-            <path class="shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
-            <path class="shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 220" preserveAspectRatio="none">
+            <path class="shape-fill" d="M555 164L0 95V220H1920V133L1595 162L1335 83L555 164Z" />
+            <path class="shape-fill" d="M553 165L0 61V220H1920V101L1596 161L1127 70L553 165Z" fill-opacity="0.66" />
+            <path class="shape-fill" d="M553 169L0 22V220H1920V69L1547 176L953 76L553 169Z" fill-opacity="0.33" />
         </svg>
     </div>
 </section>
 
-<section class="about-section">
+<section class="h-content h-content--1">
     <div class="container">
-        <div class="about-section__content">
-
-            <div class="about-section__row about-section__row--1">
-                <div class="about-section__column about-section__column--1-1">
-                    <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/about-1.png" />
+        <div class="grid">
+            <div class="grid__row grid__row--vertical-center">
+                <div class="grid__column grid__column--12">
+                    <div class="h-content__thumb">
+                        <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/about-1.png" class="img-fluid" />
+                    </div>
                 </div>
-                <div class="about-section__column about-section__column--1-2">
-                    <p class="about-section__title">Немного о нас</p>
-                    <p>Мы — это команда разработчиков, занимающихся созданием сайтов. Над вашим будущим сайтом будут работать: дизайнер — нарисует красивый макет, бэкенд-фронтенд программист — воплотит макет в функциональный сайт, контент-менеджер, оживит и наполнит сайт необходимыми материалами. Все это за сравнительно небольшую стоимость — мы ориентированы на дальнейшее сотрудничество, поддержку и развитие вашего проекта.</p>
-                </div>
-            </div>
-
-            <div class="about-section__row about-section__row">
-                <div class="about-section__column about-section__column--2-1">
-                    <p class="about-section__title">Как оценивается проект</p>
-                    <p>Кстати, о стоимости разработки сайта. Вы наверняка видели множество объявлений «создадим сайт за столько-то и столько-то денег», «разработка сайтов от стольки-то и стольки-то». Мы считаем что невозможно заранее назначить цену, не зная тонкостей и нюансов будущего проекта. Поэтому для оценки вашего проекта — свяжитесь с нами используя форму, или&nbsp;<a href="/kontakty/">контактную страницу</a>.</p>
-                </div>
-                <div class="about-section__column about-section__column--2-2">
-                    <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/about-2.png" />
+                <div class="grid__column grid__column--12">
+                    <div class="h-content__text">
+                        <p class="h-content__title">Немного о нас</p>
+                        <p>Мы — это команда разработчиков, занимающихся созданием сайтов. Над вашим будущим сайтом будут работать: дизайнер — нарисует красивый макет, бэкенд-фронтенд программист — воплотит макет в функциональный сайт, контент-менеджер, оживит и наполнит сайт необходимыми материалами. Все это за сравнительно небольшую стоимость — мы ориентированы на дальнейшее сотрудничество, поддержку и развитие вашего проекта.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -268,7 +260,7 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
 </section>
 
 <section class="inline-subscribe">
-    <div class="container container--small">
+    <div class="container">
         <div class="inline-subscribe__wrapper">
             <div class="inline-subscribe__heading">
                 <h2 class="inline-subscribe__title">Подпишитесь на рассылку</h2>
@@ -303,7 +295,7 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
         <div class="h-portfolio__links">
             <div class="h-portfolio__links-inner">
             <span class="h-portfolio__arrow">
-                <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/arrow-pencil-primary.png" />
+                <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/arrow-pencil-primary.png" class="img-fluid" />
             </span>
             <a class="btn btn--primary h-portfolio__more-btn" href="">Здесь еще больше наших работ</a>
             </div>
@@ -311,7 +303,34 @@ $this->title = 'CodeSweet | Разработка, оптимизация, под
     </div>
 </section>
 
+<section class="h-content h-content--2">
+    <div class="container">
+        <div class="grid">
+            <div class="grid__row grid__row--vertical-center">
+                <div class="grid__column grid__column--12">
+                    <div class="h-content__text">
+                        <p class="h-content__title">Как оценивается проект</p>
+                        <p>Кстати, о стоимости разработки сайта. Вы наверняка видели множество объявлений «создадим сайт за столько-то и столько-то денег», «разработка сайтов от стольки-то и стольки-то». Мы считаем что невозможно заранее назначить цену, не зная тонкостей и нюансов будущего проекта. Поэтому для оценки вашего проекта — свяжитесь с нами используя форму, или&nbsp;<a href="/kontakty/">контактную страницу</a>.</p>
+                    </div>
+                </div>
+                <div class="grid__column grid__column--12">
+                    <div class="h-content__thumb">
+                        <img src="<?php echo \Yii::$app->request->BaseUrl; ?>/images/about-2.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="h-team-posts">
+    <div class="h-services__bg-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 220" preserveAspectRatio="none">
+            <path class="shape-fill" d="M555 164L0 95V220H1920V133L1595 162L1335 83L555 164Z" />
+            <path class="shape-fill" d="M553 165L0 61V220H1920V101L1596 161L1127 70L553 165Z" fill-opacity="0.66" />
+            <path class="shape-fill" d="M553 169L0 22V220H1920V69L1547 176L953 76L553 169Z" fill-opacity="0.33" />
+        </svg>
+    </div>
     <div class="container">
         <div class="h-team-posts__inner">
             <div class="h-team-posts__column-1">

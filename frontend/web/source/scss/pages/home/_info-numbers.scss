@@ -1,0 +1,134 @@
+.info-numbers {
+  margin-top: 90px;
+  position: relative;
+  z-index: 1;
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    background: url("../img/info-numbers-bg.jpg") center center no-repeat;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.6;
+      content: "";
+    }
+  }
+
+  &__heading {
+    max-width: 25%;
+    flex: 0 0 25%;
+    background: $colorPrimary;
+    padding: 15px;
+    color: #fff;
+    position: relative;
+  }
+
+  &__heading-box {
+    padding: 15px;
+    border: 1px solid #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__heading-box-inner {
+    max-width: 182px;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    font-family: $fontFamilyHeadings;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-family: $fontCursive;
+    line-height: 1.2;
+  }
+
+  &__content {
+    max-width: 75%;
+    flex: 0 0 75%;
+    position: relative;
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 60px;
+  }
+
+  &__item {
+    max-width: 33.333333%;
+    flex: 0 0 33.333333%;
+  }
+}
+
+.info-number {
+  text-align: center;
+
+  &__ico {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: $fontFamilyHeadings;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    color: #fff;
+  }
+}
+
+@media (max-width: 992px) {
+  .info-numbers {
+    &__heading {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    &__heading-box {
+      display: block;
+      text-align: center;
+    }
+
+    &__heading-box-inner {
+      max-width: none;
+    }
+
+    &__content {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .info-numbers {
+    &__item {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
