@@ -16,6 +16,8 @@ use yii\helpers\Html;
     <meta name='yandex-verification' content='629a37a0e9b3d162' />
     <meta name="webmoney" content="EB02B9BF-70BD-43FD-A580-D03251AED6AF"/>
 
+    <!--<script src="/site.js" />-->
+
     <title><?php echo Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <?php echo Html::csrfMetaTags() ?>

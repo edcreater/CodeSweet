@@ -19,28 +19,31 @@
     display: block;
     margin: 1px 0 0;
     padding: 0;
-
   }
+
   li {
     list-style: none;
     display: block;
     float: left;
     margin: 0 10px;
+
     &.menu-item-has-children {
       position: relative;
     }
+
     &:hover {
       a {
         text-decoration: none;
         background: url(../img/menu-corner.png) top right no-repeat #ff5145;
         color: #fff;
-        transition: background-color .3s ease-in-out;
-
+        transition: background-color 0.3s ease-in-out;
       }
+
       p.sub {
         color: #fff;
       }
     }
+
     &.menu-item-has-children:hover .sub-menu {
       height: auto;
       opacity: 1;
@@ -59,14 +62,17 @@
       left: 0;
       background: url(../img/submenu-top.png) top left repeat-x;
       transition: opacity 0.3s ease-in-out;
+
       li {
         margin: 3px 0 0;
         width: 100%;
-        box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 40px rgba(0,0,0,.1) inset;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
         &:first-child {
           margin-top: 8px;
         }
       }
+
       a {
         height: auto;
         background: #fff;
@@ -75,6 +81,7 @@
         color: #333;
         font-size: 13px;
         transition: none;
+
         &:hover,
         &:focus,
         &:active {
@@ -82,14 +89,17 @@
           color: #fff;
         }
       }
+
       p.strong {
         margin: 0;
       }
+
       p.sub {
         display: none;
       }
     }
   }
+
   a {
     height: 115px;
     vertical-align: middle;
@@ -100,9 +110,11 @@
     color: #333;
     box-sizing: border-box;
   }
+
   p.strong {
     margin: 0;
   }
+
   p.sub {
     text-transform: none;
     font-size: 13px;
@@ -110,7 +122,6 @@
     padding-top: 5px;
     display: inline-block;
   }
-
 }
 
 /**
@@ -124,18 +135,23 @@
     margin-top: 37.5px;
     margin-bottom: 37.5px;
     margin-left: 5px;
+
     &.ico-vk {
       background: url(../img/ico-vk.png) no-repeat;
+
       &:hover {
         background-position: 0 -40px;
       }
     }
+
     &.ico-fb {
       background: url(../img/ico-fb.png) no-repeat;
+
       &:hover {
         background-position: 0 -40px;
       }
     }
+
     &.mobile-button {
       display: none;
       background: url(../img/mobile-button.png) center center no-repeat;
@@ -150,6 +166,7 @@
     font-weight: 900;
     line-height: 1;
     font-size: 1.5rem;
+
     &--darked {
       color: $colorDark;
     }
@@ -161,12 +178,14 @@
     color: $colorText;
     line-height: 1;
   }
+
   &__link {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     text-decoration: none;
     margin-right: 5px;
+
     &:hover,
     &:focus,
     &:active {

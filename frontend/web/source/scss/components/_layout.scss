@@ -3,7 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   &__content {
     flex: 1 0 auto;
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -37,7 +37,7 @@
     z-index: -1;
     background: url(../img/pattern.png);
     background-repeat: repeat;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &__inner {

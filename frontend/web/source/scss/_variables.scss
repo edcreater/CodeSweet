@@ -2,10 +2,10 @@
 //Documentation http://susydocs.oddbird.net/en/latest/
 
 $img: "../img/"; //images path
-$fonts: "../fonts/"; //fonts path
+//$fonts: "../fonts/"; //fonts path
 
 //Basic project styles
-$primaryFont: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+$primaryFont: "PT Sans", "Arial", "Helvetica", sans-serif;
 
 $fontSizeBase: 16px;
 
@@ -13,19 +13,17 @@ $colorBg: #f2f2f1;
 $colorPrimary: #e9446e;
 $colorSecondary: #52a7ff;
 
-$bgSecondary: #ddeeff;
+$bgSecondary: #def;
 
 $colorDark: #3d4255;
 
 $colorText: #73737b;
 
-
-
-$fontFamilyBase: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
-$fontFamilyHeadings: 'Intro', 'Arial', 'Helvetica', sans-serif;
+$fontFamilyBase: "PT Sans", "Arial", "Helvetica", sans-serif;
+$fontFamilyHeadings: "Intro", "Arial", "Helvetica", sans-serif;
 $colorHeadings: #333;
 
-$fontCursive: 'Tinos', cursive;
+$fontCursive: "Tinos", cursive;
 $secondaryMenuColor: #ada08e;
 
 $colorLink: $colorPrimary;

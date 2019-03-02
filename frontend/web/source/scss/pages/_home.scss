@@ -6,8 +6,9 @@
   min-height: 520px;
   position: relative;
   z-index: 0;
-  &:before {
-    content: '';
+
+  &::before {
+    content: "";
     background: url("../img/h-illustration-arrow.png") top right no-repeat;
     width: 756px;
     height: 123px;
@@ -16,11 +17,13 @@
     right: 0;
     z-index: -1;
   }
+
   &__inner {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
   }
+
   &__description {
     max-width: 25%;
     flex: 0 0 25%;
@@ -28,10 +31,12 @@
     border-bottom: 5px solid #d7d7d7;
     padding: 20px;
     margin-bottom: 10px;
+
     h3 {
       color: #fff;
     }
   }
+
   &__iconbox {
     max-width: 25%;
     flex: 0 0 25%;
@@ -41,7 +46,9 @@
 // Iconbox
 .iconbox {
   $this: &;
+
   padding-left: 10px;
+
   &__item {
     border-bottom: 0;
     border-left: 5px solid #d7d7d7;
@@ -51,51 +58,58 @@
     align-items: center;
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: 0.9rem;
     height: 46px;
+
     .icon {
       fill: #fff;
       width: 26px;
       height: 26px;
       display: block;
     }
+
     &:hover {
       #{$this}__item-icon {
         transform: rotate(360deg);
       }
     }
   }
+
   &__item-icon {
-    transition: transform .55s, transform .55s;
+    transition: transform 0.55s, transform 0.55s;
     margin-right: 10px;
+
     img {
       display: block;
     }
   }
 }
 
-
 .info-numbers {
   margin-top: 90px;
-  margin-bottom: -100px;
+  position: relative;
+  z-index: 1;
+
   &__inner {
     display: flex;
     flex-flow: row wrap;
-    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     background: url("../img/info-numbers-bg.jpg") center center no-repeat;
     position: relative;
-    &:before {
+
+    &::before {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       background: #000;
-      opacity: .6;
+      opacity: 0.6;
       content: "";
     }
   }
-  &__heading{
+
+  &__heading {
     max-width: 25%;
     flex: 0 0 25%;
     background: $colorPrimary;
@@ -103,6 +117,7 @@
     color: #fff;
     position: relative;
   }
+
   &__heading-box {
     padding: 15px;
     border: 1px solid #fff;
@@ -111,9 +126,11 @@
     align-items: center;
     justify-content: center;
   }
+
   &__heading-box-inner {
     max-width: 182px;
   }
+
   &__title {
     font-size: 1.75rem;
     font-weight: 900;
@@ -122,32 +139,38 @@
     line-height: 1.2;
     margin-bottom: 15px;
   }
+
   &__subtitle {
     font-family: $fontCursive;
     font-size: 1.3rem;
     line-height: 1.2;
   }
+
   &__content {
     max-width: 75%;
     flex: 0 0 75%;
     position: relative;
   }
+
   &__items {
     display: flex;
     flex-flow: row wrap;
     padding: 60px;
   }
+
   &__item {
     max-width: 33.333333%;
     flex: 0 0 33.333333%;
-
   }
 }
+
 .info-number {
   text-align: center;
+
   &__ico {
     margin-bottom: 15px;
   }
+
   &__title {
     font-family: $fontFamilyHeadings;
     font-size: 2rem;
@@ -155,6 +178,7 @@
     line-height: 1;
     font-weight: 900;
   }
+
   &__subtitle {
     color: #fff;
   }
@@ -165,27 +189,32 @@
  */
 .h-info {
   padding: 140px 0 140px;
+
   &__heading {
     margin-bottom: 30px;
     border-left: 3px solid $colorPrimary;
     padding-left: 10px;
   }
+
   &__title {
     font-size: 1.5rem;
     padding: 0 0 0.5rem;
     line-height: 1;
     text-transform: uppercase;
   }
+
   &__subtitle {
     font-family: $fontCursive;
     font-size: 1.3rem;
     line-height: 1;
   }
+
   &__content {
     display: flex;
     margin: 0 -15px;
     padding: 0 50px;
   }
+
   &__column {
     max-width: 50%;
     flex: 0 0 50%;
@@ -193,40 +222,70 @@
   }
 }
 
-
 /**
  * Services
  */
 .h-services {
-  border-top-width: 20px!important;
-  padding: 220px 0 120px;
-  background: #f9f9f9;
-  &__row {
-    margin-bottom: 30px
+  border-top-width: 20px !important;
+  margin: 20px 0 220px;
+  padding-top: 120px;
+  position: relative;
+  background: $bgSecondary;
+
+  &__bg-top {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    transform: rotate(180deg);
+
+    .shape-fill {
+      fill: $bgSecondary;
+    }
   }
+
+  &__bg-bottom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    .shape-fill {
+      fill: $bgSecondary;
+    }
+  }
+
+  &__row {
+    margin-bottom: 30px;
+  }
+
   &__item {
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
   }
+
   &__buttons {
-    text-align: center
+    text-align: center;
   }
+
   &__more-link {
     font-weight: 700;
     font-size: 1.15rem;
     text-decoration: none;
     border-bottom: 1px dotted #2d2d2d;
+
     &:active,
     &:focus,
     &:hover {
       text-decoration: none;
-      border-color: transparent
+      border-color: transparent;
     }
   }
 }
 
 .services-box {
   display: flex;
+
   &__item {
     width: 25%;
     padding: 0 15px;
@@ -240,31 +299,36 @@
     position: relative;
     width: 100%;
   }
+
   &__overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(45, 45, 45, .35);
-    transition: all .3s ease-in-out .1s;
+    background: rgba(45, 45, 45, 0.35);
+    transition: all 0.3s ease-in-out 0.1s;
   }
+
   &__thumb {
     margin-bottom: 10px;
   }
+
   &__title {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transition: all .3s ease-in-out .4s;
+    transition: all 0.3s ease-in-out 0.4s;
     padding: 25px;
     overflow: hidden;
+
     a {
       display: block;
-      text-decoration: none
+      text-decoration: none;
     }
+
     span {
       position: relative;
       display: inline-block;
@@ -278,22 +342,28 @@
       line-height: 1.2;
       margin-bottom: 5px;
     }
+
     span:nth-of-type(1) {
-      transition: all .3s ease-in-out .1s
+      transition: all 0.3s ease-in-out 0.1s;
     }
+
     span:nth-of-type(2) {
-      transition: all .3s ease-in-out .2s
+      transition: all 0.3s ease-in-out 0.2s;
     }
+
     span:nth-of-type(3) {
-      transition: all .3s ease-in-out .3s
+      transition: all 0.3s ease-in-out 0.3s;
     }
+
     span:nth-of-type(4) {
-      transition: all .3s ease-in-out .4s
+      transition: all 0.3s ease-in-out 0.4s;
     }
   }
+
   &__button {
     width: 100%;
     font-size: 0.9rem;
+
     .ico {
       display: inline-block;
       vertical-align: middle;
@@ -302,6 +372,7 @@
       height: 20px;
       margin-right: 8px;
     }
+
     .label {
       display: inline-block;
       vertical-align: middle;
@@ -314,11 +385,11 @@
         margin-left: -100%;
       }
     }
+
     #{$this}__overlay {
       opacity: 0;
     }
   }
-
 }
 
 /**
@@ -327,35 +398,42 @@
 .h-portfolio {
   background: url(../img/work-box-bg.jpg) center center no-repeat;
   background-size: cover;
+
   &__inner {
     background: url(../img/pattern.png);
     background-repeat: repeat;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 80px 0 60px;
   }
+
   &__heading {
     color: #fff;
   }
+
   &__title {
     font-weight: 700;
     color: #fff;
   }
+
   // Links
   &__links {
     margin-top: 80px;
     text-align: center;
   }
+
   &__links-inner {
     position: relative;
     display: inline-block;
   }
-  &__arrow{
+
+  &__arrow {
     vertical-align: middle;
     display: inline-block;
     position: absolute;
     left: -158px;
     top: -13px;
   }
+
   &__more-btn {
     vertical-align: middle;
     margin-top: 10px;
@@ -363,12 +441,12 @@
     align-items: center;
     position: relative;
     padding-left: 40px;
-    &:before {
-      content: '';
+
+    &::before {
+      content: "";
       position: absolute;
       left: 11px;
       top: 10px;
-
       background: url("../img/ico-connection.png") 0 0 no-repeat;
       width: 22px;
       height: 22px;
@@ -386,15 +464,14 @@
     padding: 60px 0;
     margin: 0 -15px;
   }
+
   &__column-1 {
     width: 50%;
     padding: 0 15px;
   }
+
   &__column-2 {
     width: 50%;
     padding: 0 15px;
   }
 }
-
-
-

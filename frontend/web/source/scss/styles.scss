@@ -2,14 +2,14 @@
 
 // width
 @mixin r($width) {
-	@media only screen and (max-width: $width+ "px") {
-		@content;
-	}
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
 }
 
 @import "variables";
-
 @import "libs/normalize-scss/normalize";
+
 @include normalize();
 
 @import "libs/bourbon/bourbon";
@@ -33,7 +33,6 @@
 
 // Blocks
 @import "blocks/header";
-@import "blocks/home";
 @import "blocks/about-section";
 @import "blocks/inline-subscribe";
 @import "blocks/works-box";
@@ -44,3 +43,4 @@
 
 // Pages
 @import "pages/developments";
+@import "pages/home";

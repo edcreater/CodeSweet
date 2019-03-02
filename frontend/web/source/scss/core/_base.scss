@@ -1,76 +1,86 @@
-*, *:before, *:after {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-	font-size: $fontSizeBase;
-	height: 100%;
+  font-size: $fontSizeBase;
+  height: 100%;
 }
 
 body {
-	width: 100%;
-	min-height: 100%;
-	margin: 0 auto;
-	font-family: $primaryFont;
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1.8;
-	color: $colorText;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	//background: url("../img/home.jpg") center top no-repeat;
-
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $colorText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //background: url("../img/home.jpg") center top no-repeat;
 }
+
 .wrapper {
-	//opacity: 0.6;
+  //opacity: 0.6;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 p {
-	padding: 0;
-	margin: 0;
-	max-height:1000000px;
+  padding: 0;
+  margin: 0;
+  max-height: 1000000px;
 }
-h1, h2, h3, h4, h5, h6 {
-	padding: 6px 0;
-	margin: 0;
-	max-height:1000000px;
-	line-height: 1.1;
-	font-family: $fontFamilyHeadings;
-	color: $colorHeadings;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 6px 0;
+  margin: 0;
+  max-height: 1000000px;
+  line-height: 1.1;
+  font-family: $fontFamilyHeadings;
+  color: $colorHeadings;
 }
 
 h1 {
-	font-size: 1.4rem;
+  font-size: 1.4rem;
 }
+
 h2 {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
+
 h3 {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
-a{
-	color: $colorPrimary;
-	text-decoration: none;
-	&:hover,
-	&:focus,
-	&:active{
-		color: darken($colorPrimary, 20%);
-		text-decoration: underline;
-	}
+a {
+  color: $colorPrimary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($colorPrimary, 20%);
+    text-decoration: underline;
+  }
 }
 
-li, ol, ul {
-	max-height:1000000px;
+li,
+ol,
+ul {
+  max-height: 1000000px;
 }
 
 div {
-	max-height: 1000000px;
+  max-height: 1000000px;
 }
-
-
-

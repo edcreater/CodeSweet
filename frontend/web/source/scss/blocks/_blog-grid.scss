@@ -21,7 +21,7 @@
     position: relative;
 
     img {
-      transition: opacity .35s, transform .35s;
+      transition: opacity 0.35s, transform 0.35s;
       height: auto;
       width: 100%;
     }
@@ -59,15 +59,15 @@
   &__subtitle {
     padding: 10px 0;
     margin: 0;
-    font-size: .875em;
+    font-size: 0.875em;
     line-height: 1.1;
   }
 
   &:hover {
     .blog-grid-item__thumb img {
-      opacity: .5;
+      opacity: 0.5;
       transform: scale(1.1);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 }
@@ -96,7 +96,7 @@
 
   &__ico {
     display: inline-block;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background: #f2f2f2;
     color: $colorPrimary;
     height: 36px;
@@ -106,7 +106,7 @@
 
   &__label {
     display: inline-block;
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 0 5px;
     color: #fff;
 

@@ -1,3 +1,4 @@
+import '../scss/styles.scss';
 import 'prismjs/prism';
 
 (function ($) {
