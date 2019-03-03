@@ -76,6 +76,9 @@ module.exports = {
       failOnError: false,
       syntax: 'scss',
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jQuery"
+    }),
   ],
 };

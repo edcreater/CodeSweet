@@ -16,7 +16,14 @@ use yii\helpers\Html;
     <meta name='yandex-verification' content='629a37a0e9b3d162' />
     <meta name="webmoney" content="EB02B9BF-70BD-43FD-A580-D03251AED6AF"/>
 
-    <!--<script src="/site.js" />-->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo \Yii::$app->request->BaseUrl; ?>/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo \Yii::$app->request->BaseUrl; ?>/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo \Yii::$app->request->BaseUrl; ?>/favicons/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo \Yii::$app->request->BaseUrl; ?>/favicons/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo \Yii::$app->request->BaseUrl; ?>/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <title><?php echo Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -56,6 +63,7 @@ use yii\helpers\Html;
 <?php $this->beginBody() ?>
     <?php echo $content ?>
 <?php $this->endBody() ?>
+<script src="/site.js"></script>
 
 <svg version="1.1" id="svg-icons-set" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
