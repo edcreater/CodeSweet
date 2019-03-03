@@ -1,5 +1,5 @@
 .inline-subscribe {
-  background: $colorDark;
+  background: $colorHeadings;
   position: relative;
   color: #fff;
   box-shadow: 0 0 32px 0 rgba(122, 122, 122, 0.4);
@@ -73,6 +73,39 @@
       border-bottom-color: transparent;
       color: lighten($colorPrimary, 10%);
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .inline-subscribe {
+    &__wrapper {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
+    &__heading {
+      margin-bottom: 30px;
+    }
+
+    &__inner {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inline-subscribe {
+    &__inner {
+      flex-flow: column nowrap;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .inline-subscribe {
+    &__input {
+      max-width: 100%;
     }
   }
 }

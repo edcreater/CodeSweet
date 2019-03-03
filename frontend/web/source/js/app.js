@@ -31,6 +31,13 @@ import 'prismjs/prism';
         $('.developments-list-item').mouseleave(function(){
             $('#developments-list__clipper-unhover')[0].beginElement();
         });
+
+        $('.service-box').mouseenter(function(){
+            $('#service-box__clipper-hover')[0].beginElement();
+        });
+        $('.service-box').mouseleave(function(){
+            $('#service-box__clipper-unhover')[0].beginElement();
+        });
     });
 
     $(window).on('load', function(){

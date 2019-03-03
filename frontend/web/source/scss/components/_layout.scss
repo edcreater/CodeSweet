@@ -14,8 +14,23 @@
   }
 }
 
+.container {
+  max-width: 1230px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @include r(1230) {
+    width: 100%;
+  }
+
+  &--small {
+    max-width: 970px;
+  }
+}
+
 .page-heading {
-  background: $colorDark;
+  background: $colorHeadings;
   background: url("../img/page-heading-bg.jpg") center center no-repeat;
   background-attachment: fixed;
   color: #fff;

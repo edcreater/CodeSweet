@@ -6,20 +6,8 @@
   &__inner {
     display: flex;
     flex-flow: row wrap;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-    background: url("../img/info-numbers-bg.jpg") center center no-repeat;
+    box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.08);
     position: relative;
-
-    &::before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      opacity: 0.6;
-      content: "";
-    }
   }
 
   &__heading {
@@ -86,13 +74,13 @@
   &__title {
     font-family: $fontFamilyHeadings;
     font-size: 2rem;
-    color: #fff;
     line-height: 1;
     font-weight: 900;
+    color: $colorHeadings;
   }
 
   &__subtitle {
-    color: #fff;
+    color: $colorHeadings;
   }
 }
 

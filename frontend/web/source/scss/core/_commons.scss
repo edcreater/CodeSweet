@@ -2,21 +2,6 @@
   display: none;
 }
 
-.container {
-  max-width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-
-  @include r(1230) {
-    width: 100%;
-  }
-
-  &--small {
-    max-width: 970px;
-  }
-}
-
 .img-fluid {
   display: block;
   max-width: 100%;
@@ -68,7 +53,7 @@
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
 
     &::after {
