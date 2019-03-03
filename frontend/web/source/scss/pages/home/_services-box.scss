@@ -87,7 +87,6 @@
     z-index: 0;
 
     img {
-      clip-path: url("#service-box__clipper");
       transition: 0.2s ease-in-out;
       position: relative;
       left: 0;
@@ -98,7 +97,6 @@
 
     &::after {
       content: "";
-      clip-path: url("#service-box__clipper");
       background: #fff;
       position: absolute;
       left: 0;
@@ -113,6 +111,10 @@
     max-width: 50%;
     flex: 0 0 50%;
     padding: 50px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
   }
 }
 

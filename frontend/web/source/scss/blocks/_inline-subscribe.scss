@@ -31,7 +31,6 @@
     margin-bottom: 0;
     line-height: 1;
     font-family: $fontCursive;
-    font-size: 1.2rem;
   }
 
   &__inner {
@@ -98,14 +97,20 @@
   .inline-subscribe {
     &__inner {
       flex-flow: column nowrap;
+      width: 100%;
     }
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
   .inline-subscribe {
+    &__form {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+
     &__input {
-      max-width: 100%;
+      min-width: 0;
     }
   }
 }

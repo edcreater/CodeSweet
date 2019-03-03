@@ -9,7 +9,7 @@
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
+    color: $colorHeadings;
     margin: 0 10px 0 0;
   }
 
@@ -40,7 +40,8 @@
   }
 
   &__position {
-    font-size: 14px;
     line-height: 1;
+    color: $colorHeadings;
+    font-size: 0.75rem;
   }
 }

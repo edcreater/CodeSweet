@@ -32,11 +32,13 @@ import 'prismjs/prism';
             $('#developments-list__clipper-unhover')[0].beginElement();
         });
 
-        $('.service-box').mouseenter(function(){
-            $('#service-box__clipper-hover')[0].beginElement();
-        });
-        $('.service-box').mouseleave(function(){
-            $('#service-box__clipper-unhover')[0].beginElement();
+        $('.service-box').each(function() {
+            $(this).mouseenter(function(){
+                $('.clipper-hover', this)[0].beginElement();
+            });
+            $(this).mouseleave(function(){
+                $('.clipper-unhover', this)[0].beginElement();
+            });
         });
     });
 
