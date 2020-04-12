@@ -21,6 +21,8 @@ return [
 
         // Portfolio
         ['pattern' => 'portfolio', 'route' => 'work/index'],
+        ['pattern' => 'portfolio/<category>/', 'route' => 'work/category'],
+        ['pattern' => 'portfolio/<category>/<slug>/', 'route' => 'work/view'],
 
         // Api
         ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/article', 'only' => ['index', 'view', 'options']],

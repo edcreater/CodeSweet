@@ -70,12 +70,21 @@ class SiteController extends Controller
         if (!$xml_sitemap = Yii::$app->cache->get('sitemap')) {
             //Получаем мыссив всех ссылок
             $urls = $sitemap->getUrl();
-            //Формируем XML файл
-            $xml_sitemap = $sitemap->getXml($urls);
-            // кэшируем результат
-            Yii::$app->cache->set('sitemap', $xml_sitemap, 3600*12);
+            //var_dump($urls);
+
+            $xml_sitemap = $this->renderPartial('sitemap', array( // записываем view на переменную для последующего кэширования
+                'host' => Yii::$app->request->hostInfo,         // текущий домен сайта
+                'urls' => $urls,                                // с генерированные ссылки для sitemap
+            ));
+
+            Yii::$app->cache->set('sitemap', $xml_sitemap, 60*60*12); // кэшируем результат на 12 ч
         }
-        //Выводим карту сайта
-        $sitemap->showXml($xml_sitemap);
+
+        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+        $headers = Yii::$app->response->headers;
+        $headers->add('Content-Type', 'text/xml');
+
+        return $xml_sitemap;
+
     }
 }

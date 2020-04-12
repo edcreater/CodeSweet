@@ -46,15 +46,13 @@ class CsWorksBox extends Widget
                 <?php
                 foreach ($items as $item) {
 
-
+					$thumb = Html::img('@storageUrl/thumbs/' . $item->thumbnail['path']);
                     ?>
 
                     <div class="works-box__item work-box <?php echo $item->size; ?>">
                         <div class="work-box__inner">
                             <div class="work-box__thumb">
-                                <a href="#" class="work-box__link">
-                                    <?php echo Html::img('@storageUrl/thumbs/' . $item->thumbnail['path']); ?>
-                                </a>
+								<?php echo Html::a($thumb, ['work/view', 'category'=>$item->category->slug, 'slug'=>$item->slug]) ?>
                             </div>
                             <div class="work-box__title work-box__title--js">
                                 <?php echo $item->title; ?>

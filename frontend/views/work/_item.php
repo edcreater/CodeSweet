@@ -5,13 +5,12 @@
  */
 use yii\helpers\Html;
 
+$thumb = Html::img('@storageUrl/thumbs/' . $model->thumbnail['path']);
 ?>
 <div class="works-box__item work-box">
     <div class="work-box__inner">
         <div class="work-box__thumb">
-            <a href="#" class="work-box__link">
-                <?php echo Html::img('@storageUrl/thumbs/' . $model->thumbnail['path']); ?>
-            </a>
+            <?php echo Html::a($thumb, ['view', 'category'=>$model->category->slug, 'slug'=>$model->slug]) ?>
         </div>
         <div class="work-box__title work-box__title--js">
             <?php echo $model->title; ?>
