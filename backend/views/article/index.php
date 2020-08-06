@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]
             ],
             'published_at:datetime',
-            'created_at:datetime',
+            'updated_at:datetime',
 
             // 'updated_at',
 

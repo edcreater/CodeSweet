@@ -32,7 +32,7 @@ class Sitemap extends Model
                 'loc'        => Yii::$app->urlManager->createUrl([
                     'article/view', 'category' => $row['category_slug'], 'slug' => $row['slug']
                 ]),
-                'lastmod'    => date(DATE_W3C, strtotime($row['updated_at'])),
+                'lastmod'    => date(DATE_W3C, $row['updated_at']),
                 'changefreq' => 'daily',
                 'priority'   => 1.0
             ];
@@ -45,7 +45,7 @@ class Sitemap extends Model
         foreach ($url_cats as $row) {
             $urls[] = [
                 'loc'        => Yii::$app->urlManager->createUrl(['article/category', 'category' => $row->slug]),
-                'lastmod'    => date(DATE_W3C, strtotime($row->updated_at)),
+                'lastmod'    => date(DATE_W3C, $row->updated_at),
                 'changefreq' => 'daily',
                 'priority'   => 1.0
             ];

@@ -40,10 +40,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="page__content">
     <div class="container">
-        <div class="layout">
+        <div class="layout layout--sideright">
             <div class="layout__content content">
 
 				<?php echo $model->body ?>
+
+            </div>
+
+            <div class="layout__sidebar">
+
+                <p>Sidebar</p>
 
             </div>
         </div>

@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");const CleanPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports  = {
     entry: {
@@ -81,7 +82,7 @@ module.exports  = {
         ]
     },
     plugins: [
-        new CleanPlugin('./frontend/web/bundle'),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         })

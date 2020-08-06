@@ -31,25 +31,40 @@ use yii\helpers\Html;
 	
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" >
-	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter30164969 = new Ya.Metrika({
+						id:30164969,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true
+					});
+				} catch(e) { }
+			});
 
-	   ym(30164969, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true
-	   });
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/30164969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+<script data-ad-client="ca-pub-9493950254006774" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-	<script src="/site.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>
     <?php echo $content ?>
 <?php $this->endBody() ?>
+<!--<script src="/site.js"></script>-->
 
 <svg version="1.1" id="svg-icons-set" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">

@@ -27,7 +27,7 @@ $this->registerMetaTag([
 
 <div class="page__content">
     <div class="container">
-        <div class="layout">
+        <div class="layout layout--sideright">
             <div class="layout__content">
                 <div class="blog-grid">
                     <?php
@@ -64,6 +64,10 @@ $this->registerMetaTag([
                     ]);
                     ?>
                 </div>
+            </div>
+
+            <div class="layout__sidebar">
+                Sidebar
             </div>
         </div>
     </div>
