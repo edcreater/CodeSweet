@@ -1,4 +1,7 @@
 <?php
+use yii\helpers\ArrayHelper;
+use yii\queue\file\Queue;
+
 $config = [
     'name' => 'CodeSweet',
     'vendorPath' => __DIR__ . '/../../vendor',
@@ -50,9 +53,20 @@ $config = [
 
         'mailer' => [
             'class' => yii\swiftmailer\Mailer::class,
+            'viewPath' => '@common/mail',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'robot@codesweet.ru',
+                'password' => 'jfqaxqicsrdkcubv',
+                'port' => '465',
+                'encryption' => 'SSL',
+            ],
             'messageConfig' => [
                 'charset' => 'UTF-8',
-                'from' => env('ADMIN_EMAIL')
+                'from' => env('ROBOT_EMAIL'),
+                'to' => env('ADMIN_EMAIL')
             ]
         ],
 
@@ -141,21 +155,21 @@ $config = [
             'class' => common\components\keyStorage\KeyStorage::class
         ],
 
-        'urlManagerBackend' => \yii\helpers\ArrayHelper::merge(
+        'urlManagerBackend' => ArrayHelper::merge(
             [
                 'hostInfo' => env('BACKEND_HOST_INFO'),
                 'baseUrl' => env('BACKEND_BASE_URL'),
             ],
             require(Yii::getAlias('@backend/config/_urlManager.php'))
         ),
-        'urlManagerFrontend' => \yii\helpers\ArrayHelper::merge(
+        'urlManagerFrontend' => ArrayHelper::merge(
             [
                 'hostInfo' => env('FRONTEND_HOST_INFO'),
                 'baseUrl' => env('FRONTEND_BASE_URL'),
             ],
             require(Yii::getAlias('@frontend/config/_urlManager.php'))
         ),
-        'urlManagerStorage' => \yii\helpers\ArrayHelper::merge(
+        'urlManagerStorage' => ArrayHelper::merge(
             [
                 'hostInfo' => env('STORAGE_HOST_INFO'),
                 'baseUrl' => env('STORAGE_BASE_URL'),
@@ -164,7 +178,7 @@ $config = [
         ),
 
         'queue' => [
-            'class' => \yii\queue\file\Queue::class,
+            'class' => Queue::class,
             'path' => '@common/runtime/queue',
         ],
     ],

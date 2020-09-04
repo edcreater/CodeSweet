@@ -2,20 +2,38 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\captcha\Captcha;
+use yii\widgets\Breadcrumbs;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
-$this->title = 'Contact';
+$this->title = 'Связаться с нами';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?php echo Html::encode($this->title) ?></h1>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+<section class="page__heading page-heading">
+    <div class="page-heading__inner">
+
+        <div class="container">
+            <h1 class="page-heading__title"><?php echo Html::encode($this->title) ?></h1>
+            <p class="page-heading__subtitle">Упс, возникла проблема</p>
+            <div class="page-heading__breadcrumbs">
+                <?php echo Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]) ?>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="page__content">
+    <div class="container">
+        <div class="layout">
+            <div class="layout__content content">
+
+                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
                 <?php echo $form->field($model, 'name') ?>
                 <?php echo $form->field($model, 'email') ?>
                 <?php echo $form->field($model, 'subject') ?>
@@ -26,8 +44,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="form-group">
                     <?php echo Html::submitButton(Yii::t('frontend', 'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
-            <?php ActiveForm::end(); ?>
+                <?php ActiveForm::end(); ?>
+
+            </div>
         </div>
     </div>
-
 </div>

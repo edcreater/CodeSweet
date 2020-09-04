@@ -1,12 +1,20 @@
 <?php
+use yii\web\UrlNormalizer;
+
 return [
     'class' => 'yii\web\UrlManager',
     'enablePrettyUrl' => true,
     'showScriptName' => false,
     'suffix' => '/',
+    'normalizer' => [
+        'class' => 'yii\web\UrlNormalizer',
+        // use temporary redirection instead of permanent for debugging
+        'action' => UrlNormalizer::ACTION_REDIRECT_PERMANENT,
+        'normalizeTrailingSlash' => true,
+    ],
     'rules' => [
         // Pages
-        ['pattern' => 'page/<slug>', 'route' => 'page/view'],
+        ['pattern' => 'contact', 'route' => 'site/contact', 'suffix' => '/'],
         ['pattern' => 'sitemap.xml', 'route' => 'site/sitemap', 'suffix' => ''],
 
         // Articles
@@ -23,6 +31,8 @@ return [
         ['pattern' => 'portfolio', 'route' => 'work/index'],
         ['pattern' => 'portfolio/<category>/', 'route' => 'work/category'],
         ['pattern' => 'portfolio/<category>/<slug>/', 'route' => 'work/view'],
+
+        ['pattern' => '<slug>', 'route' => 'page/view'],
 
         // Api
         ['class' => 'yii\rest\UrlRule', 'controller' => 'api/v1/article', 'only' => ['index', 'view', 'options']],
