@@ -58,8 +58,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
-                'username' => 'robot@codesweet.ru',
-                'password' => 'jfqaxqicsrdkcubv',
+                'username' => env('SMTP_LOGIN'),
+                'password' => env('SMTP_PASS'),
                 'port' => '465',
                 'encryption' => 'SSL',
             ],
