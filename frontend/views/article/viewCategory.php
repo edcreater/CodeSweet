@@ -1,4 +1,5 @@
 <?php
+
 use yii\widgets\Breadcrumbs;
 use yii\widgets\LinkPager;
 
@@ -8,34 +9,34 @@ use yii\widgets\LinkPager;
 /**
  * Seo metatags
  */
-if ( $seofields->seotitle ) {
-	$this->title = \Yii::$app->name . ' | ' . $seofields->seotitle;
+if ($seofields->seotitle) {
+    $this->title = \Yii::$app->name.' | '.$seofields->seotitle;
 } else {
-	$this->title = \Yii::$app->name . ' | ' . $model->seotitle;
+    $this->title = \Yii::$app->name.' | '.$model->title;
 }
-if ( $seofields->seodescription ) {
-	$this->registerMetaTag([
-		'name' => 'description',
-		'content' => $seofields->seodescription
-	]);
+if ($seofields->seodescription) {
+    $this->registerMetaTag([
+        'name'    => 'description',
+        'content' => $seofields->seodescription
+    ]);
 }
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('frontend', 'Articles'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $model->title;
 ?>
 <section class="page__heading page-heading">
-    <div class="page-heading__inner">
-
-        <div class="container">
-            <h1 class="page-heading__title"><?php echo $model->title; ?></h1>
-            <p class="page-heading__subtitle"><?php echo $model->subtitle; ?></p>
-            <div class="page-heading__breadcrumbs">
-                <?php echo Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
+    <div class="container">
+        <div class="page-heading__inner">
+            <div>
+                <h1 class="page-heading__title"><?php echo $model->title; ?></h1>
+                <p class="page-heading__subtitle"><?php echo $model->subtitle; ?></p>
+                <div class="page-heading__breadcrumbs">
+                    <?php echo Breadcrumbs::widget([
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]) ?>
+                </div>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -57,7 +58,7 @@ $this->params['breadcrumbs'][] = $model->title;
                     */
                     ?>
                     <?php
-                    if ($articles)  {
+                    if ($articles) {
                         foreach ($articles as $article) {
                             echo $this->render('_item', [
                                 'model' => $article,
@@ -70,12 +71,12 @@ $this->params['breadcrumbs'][] = $model->title;
                 <div class="pagination__outer">
                     <?php
                     echo LinkPager::widget([
-                        'pagination' => $pages,
+                        'pagination'     => $pages,
                         'maxButtonCount' => 15,
                         // Отключаю ссылку "Следующий"
-                        'nextPageLabel' => false,
+                        'nextPageLabel'  => false,
                         // Отключаю ссылку "Предыдущий"
-                        'prevPageLabel' => false,
+                        'prevPageLabel'  => false,
                     ]);
                     ?>
                 </div>

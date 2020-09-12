@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Articles' => 'Статьи',
     'About' => 'О нас',
     'Activation email' => 'Письмо активации',
     'Account Settings' => 'Настройки аккаунта',
