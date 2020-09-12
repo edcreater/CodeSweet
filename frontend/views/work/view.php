@@ -1,4 +1,5 @@
 <?php
+
 use yii\widgets\Breadcrumbs;
 
 /* @var $this yii\web\View */
@@ -14,15 +15,17 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('frontend', 'Developments'),
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section class="page__heading page-heading">
-    <div class="page-heading__inner">
 
-        <div class="container">
-            <h1 class="page-heading__title"><?php echo $model->title; ?></h1>
-            <p class="page-heading__subtitle"><?php echo $model->subtitle; ?></p>
-            <div class="page-heading__breadcrumbs">
-		        <?php echo Breadcrumbs::widget([
-			        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-		        ]) ?>
+    <div class="container">
+        <div class="page-heading__inner">
+            <div>
+                <h1 class="page-heading__title"><?php echo $model->title; ?></h1>
+                <p class="page-heading__subtitle"><?php echo $model->subtitle; ?></p>
+                <div class="page-heading__breadcrumbs">
+                    <?php echo Breadcrumbs::widget([
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]) ?>
+                </div>
             </div>
         </div>
 
@@ -34,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="layout">
             <div class="layout__content content">
 
-				<?php echo $model->body ?>
+                <?php echo $model->body ?>
 
             </div>
         </div>
