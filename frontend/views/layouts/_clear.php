@@ -64,7 +64,7 @@ use yii\helpers\Html;
 <?php $this->beginBody() ?>
     <?php echo $content ?>
 <?php $this->endBody() ?>
-<!--<script src="/site.js"></script>-->
+-<script src="/site.js"></script>
 
 <svg version="1.1" id="svg-icons-set" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">

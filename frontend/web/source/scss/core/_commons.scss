@@ -13,11 +13,11 @@
 }
 
 .theme-color {
-  color: $colorPrimary;
+  color: $color-primary;
 }
 
 .head-color {
-  color: $colorHeadings;
+  color: $color-accent;
 }
 
 .float-right {
@@ -67,7 +67,7 @@
       bottom: 0;
       width: 65px;
       height: 3px;
-      background: $colorPrimary;
+      background: $color-primary;
     }
 
     &--centered {
@@ -80,7 +80,7 @@
 
   &__subtitle {
     font-size: 1rem;
-    color: $colorHeadings;
+    color: $color-accent;
     line-height: 1;
     font-family: $fontCursive;
     font-weight: 300;

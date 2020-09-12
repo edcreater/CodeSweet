@@ -13,7 +13,7 @@
   &__heading {
     max-width: 25%;
     flex: 0 0 25%;
-    background: $colorPrimary;
+    background: $color-primary;
     padding: 15px;
     color: #fff;
     position: relative;
@@ -76,11 +76,11 @@
     font-size: 2rem;
     line-height: 1;
     font-weight: 900;
-    color: $colorHeadings;
+    color: $color-accent;
   }
 
   &__subtitle {
-    color: $colorHeadings;
+    color: $color-accent;
   }
 }
 

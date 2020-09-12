@@ -16,8 +16,8 @@ body {
   font-family: $primaryFont;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.8;
-  color: $colorText;
+  line-height: 1.57;
+  color: $color-text;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   //background: url("../img/home.jpg") center top no-repeat;
@@ -48,21 +48,21 @@ h6 {
   max-height: 1000000px;
   line-height: 1.1;
   font-family: $fontFamilyHeadings;
-  color: $colorHeadings;
+  color: $color-accent;
 }
 
 b {
-  color: $colorHeadings;
+  color: $color-accent;
 }
 
 a {
-  color: $colorPrimary;
+  color: $color-primary;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($colorPrimary, 20%);
+    color: darken($color-primary, 20%);
     text-decoration: underline;
   }
 }

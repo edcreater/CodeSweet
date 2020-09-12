@@ -82,7 +82,7 @@
   flex-flow: row wrap;
 
   &__item {
-    background: $colorPrimary;
+    background: $color-primary;
     color: #fff;
     margin-right: 5px;
     line-height: 36px;
@@ -98,7 +98,7 @@
     display: inline-block;
     font-size: 0.9rem;
     background: #f2f2f2;
-    color: $colorPrimary;
+    color: $color-primary;
     height: 36px;
     width: 36px;
     text-align: center;

@@ -35,17 +35,17 @@ class SideArticleCategories extends Widget
 
 			?>
 
-			<div class="widget widget-article-categories">
-                <div class="widget-article-categories__heading">
+			<div class="widget s-categories">
+                <div class="s-categories__heading">
                     Категории блога
                 </div>
-                <ul class="widget-article-categories__list">
+                <ul class="s-categories__items">
 				<?php
 				foreach ($items as $item){
 
 					?>
 
-					<li class="">
+					<li class="s-categories__item">
 						<?php echo Html::a(
 							$item->title,
 							['article/category', 'category' => $item->slug]

@@ -67,7 +67,9 @@ $this->registerMetaTag([
             </div>
 
             <div class="layout__sidebar">
-                Sidebar
+
+                <?php echo $this->render('_sidebar') ?>
+
             </div>
         </div>
     </div>

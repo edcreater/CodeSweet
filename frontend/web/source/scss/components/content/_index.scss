@@ -1,8 +1,20 @@
-/**
- * Global Content
- */
+@import "illustration";
 
 .content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 6px 0;
+    margin: 0;
+    max-height: 1000000px;
+    line-height: 1.1;
+    font-family: $fontFamilyHeadings;
+    color: $color-headings;
+  }
+
   h2 {
     font-size: 1.7rem;
   }
@@ -46,7 +58,7 @@
         left: 0;
         width: 7px;
         height: 7px;
-        background: $colorPrimary;
+        background: $color-primary;
       }
     }
   }
@@ -77,16 +89,16 @@
     margin-bottom: 2rem !important;
   }
 
-  code {
+  code.inline {
     font-size: 0.9rem;
     background: $colorBg;
-    color: $colorPrimary;
+    color: $color-primary;
     padding: 3px 5px;
   }
 
   blockquote {
     background: $colorBg;
-    border-left: 5px solid $colorPrimary;
+    border-left: 5px solid $color-primary;
     font-style: italic;
     font-size: 1.1rem;
     padding: 1rem 2rem;
@@ -94,19 +106,19 @@
   }
 
   .content-theme-bg {
-    background: $colorPrimary;
+    background: $color-primary;
     color: #fff;
     padding: 3px 7px;
   }
 
   .content-light-bg {
-    color: $colorPrimary;
+    color: $color-primary;
     background: $colorBg;
     padding: 3px 7px;
   }
 
   .content-theme-color {
-    color: $colorPrimary;
+    color: $color-primary;
   }
 
   .box-info {

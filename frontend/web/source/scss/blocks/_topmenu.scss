@@ -18,7 +18,7 @@
     &:hover {
       a {
         text-decoration: none;
-        background: url(../img/menu-corner.png) top right no-repeat $colorPrimary;
+        background: url(../img/menu-corner.png) top right no-repeat $color-primary;
         color: #fff;
         transition: background-color 0.3s ease-in-out;
       }
@@ -69,7 +69,7 @@
         &:hover,
         &:focus,
         &:active {
-          background: $colorPrimary;
+          background: $color-primary;
           color: #fff;
         }
       }
@@ -90,7 +90,7 @@
     padding: 25px 15px 20px;
     text-transform: uppercase;
     font-size: 15px;
-    color: $colorHeadings;
+    color: $color-accent;
     box-sizing: border-box;
 
     &:hover,

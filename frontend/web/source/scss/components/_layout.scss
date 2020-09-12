@@ -16,8 +16,8 @@
 
 .container {
   max-width: 1230px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
   margin: 0 auto;
 
   @include r(1230) {
@@ -30,7 +30,7 @@
 }
 
 .page-heading {
-  background: $colorHeadings;
+  background: $color-accent;
   background: url("../img/page-heading-bg.jpg") center center no-repeat;
   background-attachment: fixed;
   color: #fff;
@@ -72,7 +72,7 @@
     text-transform: lowercase;
     font-family: $fontCursive;
     font-size: 0.925rem;
-    background: $colorPrimary;
+    background: $color-primary;
     padding: 2px 18px;
   }
 
@@ -98,14 +98,15 @@
     flex-flow: row wrap;
 
     #{$this}__content {
-      flex: 0 0 70%;
-      width: 70%;
+      flex: 0 0 66.666666%;
+      width: 66.666666%;
+      padding-top: 30px;
     }
 
     #{$this}__sidebar {
-      padding-left: 30px;
-      flex: 0 0 30%;
-      width: 30%;
+      padding-left: 60px;
+      flex: 0 0 33.333333%;
+      width: 33.333333%;
     }
   }
 }

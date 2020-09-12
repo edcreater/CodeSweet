@@ -1,5 +1,5 @@
 import '../scss/styles.scss';
-import 'prismjs/prism';
+import Prism from 'prismjs';
 
 (function ($) {
     $(document).ready(function () {

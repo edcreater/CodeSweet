@@ -1,5 +1,5 @@
 .inline-subscribe {
-  background: $colorHeadings;
+  background: $color-accent;
   position: relative;
   color: #fff;
   box-shadow: 0 0 32px 0 rgba(122, 122, 122, 0.4);
@@ -11,7 +11,7 @@
   }
 
   &__heading {
-    border-left: 3px solid $colorPrimary;
+    border-left: 3px solid $color-primary;
     padding-left: 10px;
   }
 
@@ -56,7 +56,7 @@
     top: 3px;
     bottom: 3px;
     border: 0;
-    background: $colorPrimary;
+    background: $color-primary;
     color: #fff;
     cursor: pointer;
   }
@@ -64,13 +64,13 @@
   &__link {
     margin-left: 10px;
     font-weight: bold;
-    border-bottom: 1px dotted $colorPrimary;
+    border-bottom: 1px dotted $color-primary;
 
     &:hover,
     &:focus,
     &:active {
       border-bottom-color: transparent;
-      color: lighten($colorPrimary, 10%);
+      color: lighten($color-primary, 10%);
       text-decoration: none;
     }
   }

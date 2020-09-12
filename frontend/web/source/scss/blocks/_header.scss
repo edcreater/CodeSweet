@@ -27,7 +27,7 @@
   margin-bottom: 2px;
 
   &__icon {
-    fill: $colorHeadings;
+    fill: $color-accent;
     margin-right: 5px;
   }
 
@@ -71,7 +71,7 @@
     width: 30px;
     height: 30px;
     margin-left: 5px;
-    background: $colorPrimary;
+    background: $color-primary;
     border-radius: 50%;
 
     .icon {
@@ -95,14 +95,14 @@
     font-size: 1.5rem;
 
     &--darked {
-      color: $colorHeadings;
+      color: $color-accent;
     }
   }
 
   &__subtitle {
     font-family: $fontCursive;
     font-size: 0.8rem;
-    color: $colorText;
+    color: $color-text;
     line-height: 1;
   }
 

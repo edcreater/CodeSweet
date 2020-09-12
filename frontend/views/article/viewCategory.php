@@ -41,47 +41,53 @@ $this->params['breadcrumbs'][] = $model->title;
 
 <div class="page__content">
     <div class="container">
-        <div class="layout">
+        <div class="layout layout--sideright">
             <div class="layout__content content">
+
+                <div class="blog-grid">
+                    <?php
+                    /*
+                    echo \yii\widgets\ListView::widget([
+                        'dataProvider' => $dataProvider,
+                        'pager' => [
+                            'hideOnSinglePage' => true,
+                        ],
+                        'itemView' => '_item'
+                    ])
+                    */
+                    ?>
+                    <?php
+                    if ($articles)  {
+                        foreach ($articles as $article) {
+                            echo $this->render('_item', [
+                                'model' => $article,
+                            ]);
+                        }
+                    }
+                    ?>
+                </div>
+
+                <div class="pagination__outer">
+                    <?php
+                    echo LinkPager::widget([
+                        'pagination' => $pages,
+                        'maxButtonCount' => 15,
+                        // Отключаю ссылку "Следующий"
+                        'nextPageLabel' => false,
+                        // Отключаю ссылку "Предыдущий"
+                        'prevPageLabel' => false,
+                    ]);
+                    ?>
+                </div>
 
                 <?php echo $model->body ?>
 
             </div>
 
-            <div class="blog-grid">
-		        <?php
-		        /*
-				echo \yii\widgets\ListView::widget([
-					'dataProvider' => $dataProvider,
-					'pager' => [
-						'hideOnSinglePage' => true,
-					],
-					'itemView' => '_item'
-				])
-				*/
-		        ?>
-		        <?php
-		        if ($articles)  {
-			        foreach ($articles as $article) {
-				        echo $this->render('_item', [
-					        'model' => $article,
-				        ]);
-			        }
-		        }
-		        ?>
-            </div>
+            <div class="layout__sidebar">
 
-            <div class="pagination__outer">
-		        <?php
-		        echo LinkPager::widget([
-			        'pagination' => $pages,
-			        'maxButtonCount' => 15,
-			        // Отключаю ссылку "Следующий"
-			        'nextPageLabel' => false,
-			        // Отключаю ссылку "Предыдущий"
-			        'prevPageLabel' => false,
-		        ]);
-		        ?>
+                <?php echo $this->render('_sidebar') ?>
+
             </div>
 
         </div>

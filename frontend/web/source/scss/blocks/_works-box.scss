@@ -13,32 +13,20 @@
   $this: &;
 
   &__inner {
+    background: #fff;
     position: relative;
     overflow: hidden;
+    padding: 10px;
+    border: 1px solid $colorBg;
+    box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
   }
 
   &__title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    background: $colorPrimary;
-    padding: 15px 20px 20px 20px;
+    padding: 15px 20px 10px 20px;
     line-height: 1.1;
     transform: translateY(0);
     transition: 0.3s ease-in-out;
     font-weight: bold;
-
-    &::after {
-      content: "";
-      border-right: 360px solid transparent;
-      border-bottom: 15px solid $colorPrimary;
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   &__thumb {

@@ -18,7 +18,7 @@
 
   &--primary {
     color: #fff;
-    background: $colorPrimary;
+    background: $color-primary;
     font-size: 0.9rem;
     font-weight: 600;
 
@@ -30,7 +30,7 @@
     &:focus,
     &:active {
       color: #fff;
-      background: $colorHeadings;
+      background: $color-accent;
     }
   }
 }

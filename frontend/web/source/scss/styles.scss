@@ -20,15 +20,13 @@
 @import "core/fonts";
 
 // Components
-@import "components/content";
+@import "components/content/index";
 @import "components/inputs";
 @import "components/buttons";
 @import "components/layout";
 
 //base
 @import "project/footer";
-@import "project/sidebar/widgets";
-@import "project/sidebar/article-categories";
 @import "project/breadcrumbs";
 
 // Blocks
@@ -40,6 +38,7 @@
 @import "blocks/team-box";
 @import "blocks/blog-grid";
 @import "blocks/developments-list";
+@import "blocks/sidebar/index";
 
 // Pages
 @import "pages/developments";

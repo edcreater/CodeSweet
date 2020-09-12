@@ -28,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[c|a]ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
       },
       {
         test: /\.svg$/,

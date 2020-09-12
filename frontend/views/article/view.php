@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="layout__sidebar">
 
-                <p>Sidebar</p>
+                <?php echo $this->render('_sidebar') ?>
 
             </div>
         </div>
