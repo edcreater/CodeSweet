@@ -28,6 +28,7 @@ use yii\db\ActiveRecord;
  * @property string $thumbnail_base_url
  * @property string $thumbnail_path
  * @property array $attachments
+ * @property array $previews
  * @property integer $category_id
  * @property integer $seotitle
  * @property integer $seodescription
@@ -42,6 +43,7 @@ use yii\db\ActiveRecord;
  * @property User $updater
  * @property WorkCategory $category
  * @property WorkAttachment[] $workAttachments
+ * @property WorkPreview[] $workPreviews
  */
 class Work extends ActiveRecord
 {
@@ -52,6 +54,11 @@ class Work extends ActiveRecord
 	 * @var array
 	 */
 	public $attachments;
+
+	/**
+	 * @var array
+	 */
+	public $previews;
 
 	/**
 	 * @var array
@@ -101,6 +108,18 @@ class Work extends ActiveRecord
 			],
 			[
 				'class' => UploadBehavior::className(),
+				'attribute' => 'previews',
+				'multiple' => true,
+				'uploadRelation' => 'workPreviews',
+				'pathAttribute' => 'path',
+				'baseUrlAttribute' => 'base_url',
+				'orderAttribute' => 'order',
+				'typeAttribute' => 'type',
+				'sizeAttribute' => 'size',
+				'nameAttribute' => 'name',
+			],
+			[
+				'class' => UploadBehavior::className(),
 				'attribute' => 'thumbnail',
 				'pathAttribute' => 'thumbnail_path',
 				'baseUrlAttribute' => 'thumbnail_base_url'
@@ -127,7 +146,7 @@ class Work extends ActiveRecord
 			[['slug', 'thumbnail_base_url', 'thumbnail_path'], 'string', 'max' => 1024],
 			[['title', 'subtitle'], 'string', 'max' => 1024],
 			[['view', 'size'], 'string', 'max' => 255],
-			[['attachments', 'thumbnail'], 'safe']
+			[['attachments', 'thumbnail', 'previews'], 'safe']
 		];
 	}
 
@@ -194,5 +213,13 @@ class Work extends ActiveRecord
 	public function getWorkAttachments()
 	{
 		return $this->hasMany(WorkAttachment::className(), ['work_id' => 'id']);
+	}
+
+	/**
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getWorkPreviews()
+	{
+		return $this->hasMany(WorkPreview::className(), ['work_id' => 'id']);
 	}
 }

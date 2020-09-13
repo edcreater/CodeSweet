@@ -84,6 +84,16 @@ use yii\bootstrap\ActiveForm;
         ]);
     ?>
 
+    <?php echo $form->field($model, 'previews')->widget(
+        Upload::className(),
+        [
+            'url' => ['/work/upload-thumb'],
+            'sortable' => true,
+            'maxFileSize' => 10000000, // 10 MiB
+            'maxNumberOfFiles' => 10
+        ]);
+    ?>
+
     <?php echo $form->field($model, 'view')->textInput(['maxlength' => true]) ?>
 
     <?php echo $form->field($model, 'size')->textInput(['maxlength' => true]) ?>

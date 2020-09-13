@@ -17,6 +17,7 @@ use yii\helpers\Html;
 				    Yii::$app->glide->createSignedUrl([
 					    'glide/index',
 					    'path' => $model->thumbnail_path,
+                        'sourcePath' => '@storage/web/source',
 					    'w' => 460,
                         'h' => 320,
                         'fit' => 'crop'

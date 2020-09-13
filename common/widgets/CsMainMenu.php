@@ -37,7 +37,7 @@ class CsMainMenu extends Widget
             ?>
             <ul id="menu-glavnoe-menyu" class="menu clearfix">
                 <li class="menu-item">
-                    <a title="Портфолио" itemprop="url" href="https://codesweet.ru/portfolio/">
+                    <a title="Портфолио" itemprop="url" href="<?php echo Url::toRoute(['work/index']); ?>">
                         <p class="strong">Портфолио</p><p class="sub">Наши работы</p>
                     </a>
                 </li>

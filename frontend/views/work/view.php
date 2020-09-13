@@ -1,6 +1,7 @@
 <?php
 
 use yii\widgets\Breadcrumbs;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Development */
@@ -34,10 +35,39 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="page__content">
     <div class="container">
-        <div class="layout">
+        <div class="layout layout--sideright">
             <div class="layout__content content">
 
                 <?php echo $model->body ?>
+
+            </div>
+
+            <div class="layout__sidebar">
+
+                <div class="sidebar">
+                    <div class="sidebar__widget widget">
+                        <?php if (!empty($model->workPreviews)): ?>
+                            <p class="widget__heading"><?php echo Yii::t('frontend', 'Previews') ?></p>
+                            <div class="work-previews">
+                                <?php foreach ($model->workPreviews as $preview): ?>
+                                <div class="work-previews__item">
+                                    <?php $thumb = Html::img(
+                                        Yii::$app->glide->createSignedUrl([
+                                            'glide/index',
+                                            'path' => $preview->path,
+                                            'w' => 440,
+                                            'h' => 660,
+                                            'fit' => 'crop-top'
+                                        ], true),
+                                        ['class' => 'img-fluid']
+                                    ) ?>
+                                    <?php echo Html::a($thumb, $preview->base_url . $preview->path, ['data-fancybox' => 'previews']); ?>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
 
             </div>
         </div>

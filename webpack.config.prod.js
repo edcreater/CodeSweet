@@ -3,6 +3,7 @@ const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");const CleanPlugin = require('clean-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports  = {
     entry: {
@@ -44,17 +45,42 @@ module.exports  = {
                         }
                     },
                     {
-                        loader: 'css-loader',
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader',
                         options: {
+                            plugins: [
+                                autoprefixer({
+                                    overrideBrowserslist: ['last 2 versions'],
+                                    cascade: false
+                                })
+                            ],
                             sourceMap: false
                         }
                     },
                     {
-                        loader: 'sass-loader',
+                        loader: 'sass-loader'
+                    }
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
                         options: {
+                            plugins: [
+                                autoprefixer({
+                                    overrideBrowserslist: ['last 2 versions'],
+                                    cascade: false
+                                })
+                            ],
                             sourceMap: false
                         }
-                    }
+                    },
                 ],
             },
             {
@@ -87,5 +113,4 @@ module.exports  = {
             filename: "css/[name].css"
         })
     ],
-    devtool: 'source-map'
 };

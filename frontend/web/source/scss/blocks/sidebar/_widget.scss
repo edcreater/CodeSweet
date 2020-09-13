@@ -1,6 +1,9 @@
 .widget {
-  background: #fff;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
+  margin: 0 0 30px;
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
 }
