@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");const CleanPlugin = require('clean-webpack-plugin');
@@ -45,39 +46,48 @@ module.exports  = {
                         }
                     },
                     {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'postcss-loader',
+                        loader: 'css-loader',
                         options: {
-                            plugins: [
-                                autoprefixer({
-                                    overrideBrowserslist: ['last 2 versions'],
-                                    cascade: false
-                                })
-                            ],
                             sourceMap: false
                         }
                     },
                     {
-                        loader: 'sass-loader'
-                    }
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'autoprefixer',
+                                        {
+                                            overrideBrowserslist: ['last 2 versions'],
+                                            cascade: false
+                                        },
+                                    ],
+                                ],
+                            },
+                            sourceMap: false
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: false
+                        }
+                    },
                 ],
             },
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
-                    'css-loader',
                     {
-                        loader: 'postcss-loader',
+                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                            plugins: [
-                                autoprefixer({
-                                    overrideBrowserslist: ['last 2 versions'],
-                                    cascade: false
-                                })
-                            ],
+                            publicPath: '../'
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
                             sourceMap: false
                         }
                     },
@@ -86,10 +96,9 @@ module.exports  = {
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [{
-                    loader: 'url-loader',
+                    loader: 'file-loader',
                     options: {
-                        limit: 5000,
-                        name: 'images/[name].[ext]',
+                        name: 'img/[name].[ext]',
                     }
                 },
                 ]
@@ -99,16 +108,22 @@ module.exports  = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'fonts/',
-                        name: '[name].[ext]',
-                        publicPath: '../fonts/'
+                        name: 'fonts/[name].[ext]',
                     }
                 }
             }
         ]
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     plugins: [
         new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+        }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         })

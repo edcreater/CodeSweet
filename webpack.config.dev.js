@@ -14,7 +14,7 @@ module.exports = {
         proxy: {
             '/': {
                 target: {
-                    host: 'codesweet.loc',
+                    host: 'codesweet.local',
                     protocol: "http:"
                 },
                 changeOrigin: true,
@@ -28,74 +28,28 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s[c|a]ss$/,
-                use: [
-                    'style-loader',
-                    'css-loader?sourceMap',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer({
-                                    overrideBrowserslist: ['last 2 versions'],
-                                    cascade: false
-                                })
-                            ],
-                            sourceMap: false
-                        }
-                    },
-                    'sass-loader?sourceMap'
-                ],
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
             },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader?sourceMap',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer({
-                                    overrideBrowserslist: ['last 2 versions'],
-                                    cascade: false
-                                })
-                            ],
-                            sourceMap: false
-                        }
-                    },
-                ],
-            },
-            {
-                test: /\.svg$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: path.join(__dirname, '/bundle'),
-                        publicPath: 'http://localhost:8080/',
-                    },
-                },
+                use: ['style-loader', 'css-loader?sourceMap'],
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [{
-                    loader: 'url-loader',
+                use: {
+                    loader: 'file-loader',
                     options: {
-                        limit: 5000,
                         name: 'img/[name].[ext]',
-                    }
+                    },
                 },
-                ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'fonts/',
-                        name: '[name].[ext]',
-                        publicPath: '../fonts/'
+                        name: 'fonts/[name].[ext]',
                     }
                 }
             }
@@ -106,15 +60,20 @@ module.exports = {
         path: path.join(__dirname, './frontend/web/bundle'),
         publicPath: 'http://localhost:8080/',
     },
+    externals: {
+        jquery: 'jQuery'
+    },
     plugins: [
         new StyleLintPlugin({
             context: './frontend/web/source/',
             failOnError: false,
             syntax: 'scss',
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
-            $: "jQuery"
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
         }),
+        new webpack.HotModuleReplacementPlugin(),
     ],
 };
