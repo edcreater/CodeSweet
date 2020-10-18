@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $model->title;
 <div class="page__content">
     <div class="container">
         <div class="layout layout--sideright">
-            <div class="layout__content content">
+            <div class="layout__content">
 
                 <div class="blog-grid">
                     <?php

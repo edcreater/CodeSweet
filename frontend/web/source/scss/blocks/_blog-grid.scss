@@ -1,24 +1,28 @@
 .blog-grid {
-  display: flex;
-  flex-flow: row wrap;
   margin-bottom: 60px;
 
   &__item {
-    flex: 0 0 33.3333%;
-    width: 33.3333%;
-    padding: 15px;
+    margin: 0 0 30px;
   }
 }
 
 .blog-grid-item {
+  border: 1px solid #f2f2f2;
+  padding: 15px;
+  box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
+
   &__inner {
     position: relative;
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   &__thumb {
     background: #000;
     backface-visibility: hidden;
     position: relative;
+    max-width: 250px;
+    flex: none;
 
     img {
       transition: opacity 0.35s, transform 0.35s;
@@ -30,30 +34,29 @@
   &__thumb-wrap {
     position: relative;
     overflow: hidden;
-    margin-bottom: 10px;
     width: 100%;
   }
 
   &__meta {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
+    margin: 0 0 15px;
   }
 
   // Heading
+  &__content {
+    flex: 1;
+  }
+
   &__heading {
-    text-align: center;
-    background: #f2f2f2;
-    padding: 0 20px;
-    margin-top: 10px;
+    padding: 0 20px 0 36px;
   }
 
   &__title {
     padding: 10px 0;
     margin: 0;
-    background: url(../img/light-border.jpg) bottom repeat-x;
-    font-size: 15px;
+    //background: url("../img/light-border.jpg") bottom repeat-x;
+    border-bottom: 1px solid $colorBorder;
+    font-size: 1.15rem;
+    line-height: 1.3;
   }
 
   &__subtitle {
@@ -84,7 +87,6 @@
   &__item {
     background: $color-primary;
     color: #fff;
-    margin-right: 5px;
     line-height: 36px;
     height: 36px;
     font-size: 0;
@@ -97,7 +99,7 @@
   &__ico {
     display: inline-block;
     font-size: 0.9rem;
-    background: #f2f2f2;
+    background: #f0f6ff;
     color: $color-primary;
     height: 36px;
     width: 36px;
@@ -106,8 +108,8 @@
 
   &__label {
     display: inline-block;
-    font-size: 0.9rem;
-    padding: 0 5px;
+    font-size: 0.8rem;
+    padding: 0 15px;
     color: #fff;
 
     a {

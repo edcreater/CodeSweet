@@ -1,7 +1,7 @@
 //Susy configuration
 //Documentation http://susydocs.oddbird.net/en/latest/
 
-$img: "../img/"; //images path
+$images-path: "../img/"; //images path
 //$fonts: "../fonts/"; //fonts path
 
 //Basic project styles
@@ -15,6 +15,7 @@ $colorSecondary: #52a7ff;
 $color-accent: #3d4255;
 
 $bgSecondary: #e8f2ff;
+$color-light: #f0f6ff;
 
 $color-text: #3d4255;
 $color-headings: #1f202b;
@@ -27,4 +28,4 @@ $secondaryMenuColor: #ada08e;
 
 $colorLink: $color-primary;
 $colorLinkHover: darken($color-primary, 10%);
-$colorBorder: #8c92a7;
+$colorBorder: #c9cace;

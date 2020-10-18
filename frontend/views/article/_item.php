@@ -28,6 +28,10 @@ use yii\helpers\Html;
 		    <?php endif; ?>
             </div>
 
+        </div>
+
+        <div class="blog-grid-item__content">
+
             <div class="blog-grid-item__meta blog-grid-meta">
                 <div class="blog-grid-meta__item">
                     <span class="blog-grid-meta__ico">
@@ -50,13 +54,12 @@ use yii\helpers\Html;
                 </div>
             </div>
 
-        </div>
-
-        <div class="blog-grid-item__heading">
-            <h2 class="blog-grid-item__title">
-		        <?php echo $model->title; ?>
-            </h2>
-            <p class="blog-grid-item__subtitle"><?php echo $model->subtitle; ?></p>
+            <div class="blog-grid-item__heading">
+                <h2 class="blog-grid-item__title">
+                    <?php echo $model->title; ?>
+                </h2>
+                <p class="blog-grid-item__subtitle"><?php echo $model->subtitle; ?></p>
+            </div>
         </div>
 
     </div>

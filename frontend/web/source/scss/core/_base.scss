@@ -62,7 +62,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: darken($color-primary, 20%);
+    color: $colorSecondary;
     text-decoration: underline;
   }
 }
