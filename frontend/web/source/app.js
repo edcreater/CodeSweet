@@ -1,7 +1,8 @@
 import '@fancyapps/fancybox';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 
-import '../scss/styles.scss';
+import './scss/styles.scss';
+import './js/commons';
 import Prism from 'prismjs';
 
 (function ($) {

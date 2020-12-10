@@ -29,8 +29,13 @@ $this->beginContent( '@frontend/views/layouts/_clear.php' )
                                     </div>
                                 </a>
                             </div>
-                            <nav class="header__menu topmenu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
-                                <div class="menu-glavnoe-menyu-container">
+                            <nav class="header__menu navbar" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <button class="navbar__toggler js-menu-toggle">
+                                    <svg class="icon" width="36px" height="36px">
+                                        <use xlink:href="#icon-menu"></use>
+                                    </svg>
+                                </button>
+                                <div class="navbar__inner js-menu">
 									<?php echo \common\widgets\CsMainMenu::widget( [] ); ?>
                                 </div>
                             </nav>

@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Tinos:400,400i");
 
-// Fontawesome
-$fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
-
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-
 @font-face {
   font-family: "Intro";
   src:

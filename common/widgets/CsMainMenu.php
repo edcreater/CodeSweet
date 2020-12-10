@@ -35,7 +35,7 @@ class CsMainMenu extends Widget
         if ($items) {
 
             ?>
-            <ul id="menu-glavnoe-menyu" class="menu clearfix">
+            <ul id="topmenu" class="topmenu clearfix">
                 <li class="menu-item">
                     <a title="Портфолио" itemprop="url" href="<?php echo Url::toRoute(['work/index']); ?>">
                         <p class="strong">Портфолио</p><p class="sub">Наши работы</p>
@@ -48,8 +48,12 @@ class CsMainMenu extends Widget
                     <ul class="sub-menu">
                         <?php foreach ($items as $item) { ?>
                         <li class="menu-item">
-                            <?php echo Html::a(
-                                $item->title,
+                            <?php
+                            $icon = '<svg class="icon" width="10px" height="10px">
+                                        <use xlink:href="#icon-angle-right"></use>
+                                    </svg>';
+                            echo Html::a(
+                                $icon . $item->title,
                                 ['article/category', 'category' => $item->slug]
                             )?>
                         </li>

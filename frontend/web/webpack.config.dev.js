@@ -5,11 +5,12 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     devServer: {
-        contentBase: path.join(__dirname, '/frontend/web/bundle'),
         host: 'localhost',
         hot: true,
-        inline: true,
-        overlay: true,
+        overlay: {
+		  warnings: true,
+		  errors: true
+		},
         port: 8080,
         proxy: {
             '/': {
@@ -22,8 +23,7 @@ module.exports = {
             }
         },
     },
-    devtool: 'source-map',
-    entry: ['./frontend/web/source/js/app.js'],
+    entry: ['./source/app.js'],
     mode: 'development',
     module: {
         rules: [
@@ -37,27 +37,17 @@ module.exports = {
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: 'img/[name].[ext]',
-                    },
-                },
+                type: 'asset/resource',
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: 'fonts/[name].[ext]',
-                    }
-                }
+                type: 'asset/resource',
             }
         ]
     },
     output: {
-        filename: 'site.js',
-        path: path.join(__dirname, './frontend/web/bundle'),
+        filename: 'app.js',
+        path: path.join(__dirname, './bundle'),
         publicPath: 'http://localhost:8080/',
     },
     externals: {
@@ -65,7 +55,6 @@ module.exports = {
     },
     plugins: [
         new StyleLintPlugin({
-            context: './frontend/web/source/',
             failOnError: false,
             syntax: 'scss',
         }),
@@ -74,6 +63,5 @@ module.exports = {
             jQuery: "jquery",
             "window.jQuery": "jquery",
         }),
-        new webpack.HotModuleReplacementPlugin(),
     ],
 };
