@@ -48,7 +48,7 @@ use yii\helpers\Html;
                     <span class="blog-grid-meta__label">
                     <?php echo Html::a(
                         $model->category->title,
-                        ['index', 'ArticleSearch[category_id]' => $model->category_id]
+                        ['article/category', 'category' => $model->category->slug]
                     )?>
                     </span>
                 </div>

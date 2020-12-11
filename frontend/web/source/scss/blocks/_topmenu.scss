@@ -217,3 +217,16 @@
     }
   }
 }
+
+@media (max-width: 460px) {
+  .navbar {
+    &__inner {
+      width: 100%;
+      transform: translate3d(100%, 0, 0);
+
+      &.active {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
