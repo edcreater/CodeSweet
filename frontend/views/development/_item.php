@@ -12,37 +12,31 @@ use yii\helpers\Html;
 
         <div class="developments-list-item__thumb">
 		    <?php if ($model->thumbnail_path): ?>
-			    <?php $thumb = Html::img(
-				    Yii::getAlias('@storageUrl') . '/thumbs/' . $model->thumbnail_path,
-				    /*Yii::$app->glide->createSignedUrl([
-					    'glide/index',
-					    'path' => $model->thumbnail_path,
-					    'w' => 460,
-                        'h' => 320,
-                        'fit' => 'crop'
-				    ], true),*/
-				    ['class' => 'img-fluid']
-			    ) ?>
+			    <?php
+                ob_start();
+                include('thumb-' . $model->id . '.php');
+                $thumb = ob_get_clean();
+                ?>
 			    <?php echo Html::a($thumb, ['view', 'category'=>$model->category->slug, 'slug'=>$model->slug]) ?>
 		    <?php endif; ?>
         </div>
 
         <div class="developments-list-item__content">
 
-            <div class="developments-list-item__meta developments-list-meta">
-                <div class="developments-list-meta__item">
-                    <span class="developments-list-meta__ico">
-                        <i class="far fa-calendar"></i>
+            <div class="developments-list-item__meta article-meta">
+                <div class="article-meta__item">
+                    <span class="article-meta__ico">
+                        <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-calendar"></use></svg>
                     </span>
-                    <span class="developments-list-meta__label">
+                    <span class="article-meta__label">
                         <?php echo Yii::$app->formatter->asDate($model->created_at) ?>
                     </span>
                 </div>
-                <div class="developments-list-meta__item">
-                   <span class="developments-list-meta__ico">
-                        <i class="far fa-newspaper"></i>
+                <div class="article-meta__item">
+                   <span class="article-meta__ico">
+                        <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-newspaper"></use></svg>
                     </span>
-                    <span class="developments-list-meta__label">
+                    <span class="article-meta__label">
                     <?php echo Html::a(
                         $model->category->title,
                         ['index', 'DevelopmentSearch[category_id]' => $model->category_id]

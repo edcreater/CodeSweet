@@ -1,0 +1,1 @@
+<?php include(Yii::getAlias('@frontend/web/images/cs-likes-counter.svg')); ?>

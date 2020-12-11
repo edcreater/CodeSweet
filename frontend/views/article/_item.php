@@ -32,20 +32,20 @@ use yii\helpers\Html;
 
         <div class="blog-grid-item__content">
 
-            <div class="blog-grid-item__meta blog-grid-meta">
-                <div class="blog-grid-meta__item">
-                    <span class="blog-grid-meta__ico">
+            <div class="blog-grid-item__meta article-meta">
+                <div class="article-meta__item">
+                    <span class="article-meta__ico">
                         <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-calendar"></use></svg>
                     </span>
-                    <span class="blog-grid-meta__label">
+                    <span class="article-meta__label">
                         <?php echo Yii::$app->formatter->asDate($model->created_at) ?>
                     </span>
                 </div>
-                <div class="blog-grid-meta__item">
-                   <span class="blog-grid-meta__ico">
+                <div class="article-meta__item">
+                   <span class="article-meta__ico">
                         <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-newspaper"></use></svg>
                     </span>
-                    <span class="blog-grid-meta__label">
+                    <span class="article-meta__label">
                     <?php echo Html::a(
                         $model->category->title,
                         ['article/category', 'category' => $model->category->slug]

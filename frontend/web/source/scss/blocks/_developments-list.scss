@@ -55,7 +55,7 @@
     &::after {
       content: "";
       clip-path: url("#developments-list__clipper");
-      background: #f4f9ff;
+      background: #fff;
       position: absolute;
       left: 0;
       top: 0;
@@ -83,7 +83,7 @@
   &__title {
     padding: 10px 0;
     margin: 0;
-    background: url(../img/light-border.jpg) bottom repeat-x;
+    background: url("../img/light-border.jpg") bottom repeat-x;
   }
 
   &__subtitle {
@@ -91,49 +91,5 @@
     margin: 0;
     font-size: 0.875em;
     line-height: 1.1;
-  }
-}
-
-/**
- * Blog grid item meta
- */
-
-.developments-list-meta {
-  color: #fff;
-  display: flex;
-  flex-flow: row wrap;
-
-  &__item {
-    background: $color-primary;
-    color: #fff;
-    margin-right: 5px;
-    line-height: 36px;
-    height: 36px;
-    font-size: 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__ico {
-    display: inline-block;
-    font-size: 0.9rem;
-    background: #fff;
-    color: $color-primary;
-    height: 36px;
-    width: 36px;
-    text-align: center;
-  }
-
-  &__label {
-    display: inline-block;
-    font-size: 0.9rem;
-    padding: 0 5px;
-    color: #fff;
-
-    a {
-      color: #fff;
-    }
   }
 }
