@@ -7,6 +7,8 @@
 }
 
 .blog-grid-item {
+  $this: &;
+
   border: 1px solid #f2f2f2;
   padding: 15px;
   box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
@@ -18,7 +20,7 @@
   }
 
   &__thumb {
-    background: #000;
+    background: #fff;
     backface-visibility: hidden;
     position: relative;
     max-width: 250px;
@@ -28,6 +30,14 @@
       transition: opacity 0.35s, transform 0.35s;
       height: auto;
       width: 100%;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.5;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 
@@ -57,6 +67,15 @@
     border-bottom: 1px solid $colorBorder;
     font-size: 1.15rem;
     line-height: 1.3;
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+
+      &:hover {
+        color: $colorSecondary;
+      }
+    }
   }
 
   &__subtitle {
@@ -64,14 +83,6 @@
     margin: 0;
     font-size: 0.875em;
     line-height: 1.1;
-  }
-
-  &:hover {
-    .blog-grid-item__thumb img {
-      opacity: 0.5;
-      transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
-    }
   }
 }
 
@@ -90,6 +101,9 @@
     line-height: 36px;
     height: 36px;
     font-size: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 
     &:last-child {
       margin-right: 0;
@@ -97,13 +111,23 @@
   }
 
   &__ico {
-    display: inline-block;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
     font-size: 0.9rem;
     background: #f0f6ff;
     color: $color-primary;
     height: 36px;
     width: 36px;
     text-align: center;
+
+    svg {
+      display: block;
+      width: 16px;
+      height: auto;
+      fill: $color-text;
+    }
   }
 
   &__label {
@@ -114,6 +138,69 @@
 
     a {
       color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog-grid-item {
+    &__thumb {
+      max-width: 35%;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-grid-item {
+    &__heading {
+      padding: 0 15px 0 20px;
+    }
+
+    &__title {
+      padding-top: 0;
+      font-size: 0.875rem;
+    }
+
+    &__meta {
+      margin: 0 0 5px;
+    }
+  }
+
+  .blog-grid-meta {
+    &__item {
+      line-height: 24px;
+      height: 24px;
+      margin-bottom: 5px;
+    }
+
+    &__ico {
+      height: 24px;
+      width: 24px;
+
+      svg {
+        width: 12px;
+      }
+    }
+
+    &__label {
+      font-size: 0.625rem;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .blog-grid-item {
+    &__inner {
+      flex-flow: column nowrap;
+    }
+
+    &__thumb {
+      max-width: 100%;
+      margin-bottom: 10px;
     }
   }
 }

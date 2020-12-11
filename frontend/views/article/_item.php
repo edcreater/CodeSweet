@@ -35,7 +35,7 @@ use yii\helpers\Html;
             <div class="blog-grid-item__meta blog-grid-meta">
                 <div class="blog-grid-meta__item">
                     <span class="blog-grid-meta__ico">
-                        <i class="far fa-calendar"></i>
+                        <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-calendar"></use></svg>
                     </span>
                     <span class="blog-grid-meta__label">
                         <?php echo Yii::$app->formatter->asDate($model->created_at) ?>
@@ -43,7 +43,7 @@ use yii\helpers\Html;
                 </div>
                 <div class="blog-grid-meta__item">
                    <span class="blog-grid-meta__ico">
-                        <i class="far fa-newspaper"></i>
+                        <svg class="icon" width="36px" height="36px"><use xlink:href="#icon-newspaper"></use></svg>
                     </span>
                     <span class="blog-grid-meta__label">
                     <?php echo Html::a(
@@ -56,7 +56,7 @@ use yii\helpers\Html;
 
             <div class="blog-grid-item__heading">
                 <h2 class="blog-grid-item__title">
-                    <?php echo $model->title; ?>
+                    <?php echo Html::a($model->title, ['view', 'category'=>$model->category->slug, 'slug'=>$model->slug]) ?>
                 </h2>
                 <p class="blog-grid-item__subtitle"><?php echo $model->subtitle; ?></p>
             </div>

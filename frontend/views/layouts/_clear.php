@@ -64,7 +64,7 @@ use yii\helpers\Html;
 <?php $this->beginBody() ?>
     <?php echo $content ?>
 <?php $this->endBody() ?>
-<!--<script src="/app.js"></script>-->
+<script src="/app.js"></script>
 
 <?php include(Yii::getAlias('@frontend/web/images/default.svg')); ?>
 </body>
