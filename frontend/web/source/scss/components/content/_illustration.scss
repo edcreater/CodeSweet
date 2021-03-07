@@ -43,3 +43,22 @@
     color: $color-headings;
   }
 }
+
+@media (max-width: 768px) {
+  .illustration {
+    flex-flow: column nowrap;
+    left: 0;
+    width: 100%;
+
+    &__image {
+      max-width: 100%;
+      margin: 0 0 15px;
+      padding: 0;
+      border-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
