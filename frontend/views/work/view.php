@@ -42,13 +42,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php if ($workMeta) : ?>
                 <div class="metabox">
-                    <p class="metabox__title">Краткое резюме</p>
+                    <p class="metabox__title">
+                        <svg class="icon" width="16px" height="16px"><use xlink:href="#icon-info"></use></svg>
+                        Краткое резюме</p>
+                    <div class="metabox__items">
                     <?php foreach ($workMeta as $meta) : ?>
-                    <div class="metabox__item">
-                        <div class="metabox__key"><?php echo $meta->key; ?></div>
-                        <div class="metabox__value"><?php echo $meta->value; ?></div>
-                    </div>
+                        <div class="metabox__item">
+                            <div class="metabox__key"><?php echo $meta->key; ?></div>
+                            <div class="metabox__value"><?php echo $meta->value; ?></div>
+                        </div>
                     <?php endforeach; ?>
+                    </div>
                 </div>
                 <?php endif; ?>
 

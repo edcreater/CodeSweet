@@ -1,0 +1,42 @@
+.metabox {
+  margin: 0 0 30px;
+
+  &__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $color-primary;
+
+    .icon {
+      margin-right: 10px;
+      fill: $color-primary;
+    }
+  }
+
+  &__items {
+    display: table;
+  }
+
+  &__item {
+    display: table-row;
+    background: #fff;
+
+    &:nth-of-type(odd) {
+      background: $color-light;
+    }
+  }
+
+  &__key,
+  &__value {
+    display: table-cell;
+    padding: 8px 25px;
+    font-size: 0.875rem;
+  }
+
+  &__key {
+    font-weight: 700;
+  }
+}
