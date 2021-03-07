@@ -26,14 +26,15 @@ class FrontendAsset extends AssetBundle
      * @var array
      */
     public $css = [
-	    //'css/app.css',
+	    'css/app.css',
     ];
 
     /**
      * @var array
      */
     public $js = [
-        //'js/app.js',
+        'js/app.js',
+        '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604489c4daa6ea82',
     ];
 
     /**

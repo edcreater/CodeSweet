@@ -58,6 +58,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php echo $model->body ?>
 
+                <div class="sharebox">
+                    <div class="sharebox__lbl">Поделиться:</div>
+                    <div class="addthis_inline_share_toolbox"></div>
+                </div>
+
             </div>
 
             <div class="layout__sidebar">

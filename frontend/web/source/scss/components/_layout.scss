@@ -62,7 +62,7 @@
 
   &__title {
     text-transform: uppercase;
-    font-size: 2.8rem;
+    font-size: 2.824rem;
     color: #fff;
     position: relative;
   }
@@ -87,7 +87,7 @@
 .layout {
   $this: &;
 
-  padding: 60px 0;
+  padding: 60px 0 80px;
 
   &__content {
     //
@@ -183,6 +183,18 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .page-heading {
+    &__inner {
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 1.647rem;
+      margin: 0 0 10px;
     }
   }
 }

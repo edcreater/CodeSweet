@@ -1,0 +1,12 @@
+.sharebox {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 40px;
+
+  &__lbl {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+}
