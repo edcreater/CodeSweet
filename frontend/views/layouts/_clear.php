@@ -57,7 +57,19 @@ use yii\helpers\Html;
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/30164969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
-<script data-ad-client="ca-pub-9493950254006774" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75288557-1">
+	</script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-75288557-1');
+	</script>
+	
+	<script data-ad-client="ca-pub-9493950254006774" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 <body>

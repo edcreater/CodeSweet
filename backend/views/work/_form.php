@@ -51,7 +51,7 @@ use yii\bootstrap\ActiveForm;
             'title'
         ), ['prompt'=>'']) ?>
 
-    <?php echo $form->field($model, 'body')->widget(
+    <?php /*echo $form->field($model, 'body')->widget(
         \yii\imperavi\Widget::className(),
         [
             'plugins' => ['fullscreen', 'fontcolor', 'video'],
@@ -63,6 +63,14 @@ use yii\bootstrap\ActiveForm;
                 'removeEmptyTags' => true,
                 'imageUpload' => Yii::$app->urlManager->createUrl(['/file-storage/upload-imperavi'])
             ]
+        ]
+    )*/ ?>
+
+    <?php echo $form->field($model, 'body')->widget(
+        trntv\aceeditor\AceEditor::className(),
+        [
+            'mode'  => 'html',
+            'theme' => 'xcode'
         ]
     ) ?>
 

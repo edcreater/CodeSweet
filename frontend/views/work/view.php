@@ -5,6 +5,8 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Development */
+/* @var $seofields common\models\Seofield */
+/* @var $workMeta common\models\WorkMeta */
 
 if ($seofields->seotitle) {
     $this->title = $seofields->seotitle;
@@ -37,6 +39,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="layout layout--sideright">
             <div class="layout__content content">
+
+                <?php if ($workMeta) : ?>
+                <div class="metabox">
+                    <p class="metabox__title">Краткое резюме</p>
+                    <?php foreach ($workMeta as $meta) : ?>
+                    <div class="metabox__item">
+                        <div class="metabox__key"><?php echo $meta->key; ?></div>
+                        <div class="metabox__value"><?php echo $meta->value; ?></div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
 
                 <?php echo $model->body ?>
 

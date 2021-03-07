@@ -35,27 +35,27 @@ class WorkController extends Controller
         return $this->render('index', ['searchModel' => $searchModel, 'dataProvider' => $dataProvider]);
         */
         $query = Work::find()->where([
-            'status' => Work::STATUS_PUBLISHED
+            'status' => Work::STATUS_PUBLISHED,
         ]);
 
         $countQuery = clone $query;
         $pages = new Pagination([
-            'totalCount' => $countQuery->count(),
-            'pageSize' => 25,
+            'totalCount'      => $countQuery->count(),
+            'pageSize'        => 25,
             'defaultPageSize' => 25,
-            'pageParam' => 'pageNum',
-            'forcePageParam' => false,
+            'pageParam'       => 'pageNum',
+            'forcePageParam'  => false,
         ]);
 
         $works = $query->offset($pages->offset)->limit($pages->limit)->orderBy('created_at desc')->all();
 
         return $this->render('index', [
-        	'seotitle' => 'CodeSweet | Наше портфолио - мы создаем сайты быстро и качественно',
+            'seotitle'       => 'CodeSweet | Наше портфолио - мы создаем сайты быстро и качественно',
             'seodescription' => 'Портфолио от команды разработчиков CodeSweet. Выполненные проекты по созданию сайтов',
-            'title' => 'Посмотрите наше портфолио',
-            'subtitle' => 'Мы постарались выполнить эти проекты качественно',
-            'works' => $works,
-            'pages' => $pages
+            'title'          => 'Посмотрите наше портфолио',
+            'subtitle'       => 'Мы постарались выполнить эти проекты качественно',
+            'works'          => $works,
+            'pages'          => $pages,
         ]);
     }
 
@@ -72,14 +72,19 @@ class WorkController extends Controller
         }
 
         $seofields = $model->seofield;
+        $workMeta = $model->workMeta;
 
         \Yii::$app->view->registerMetaTag([
-            'name' => 'description',
-            'content' => $seofields->seodescription
+            'name'    => 'description',
+            'content' => $seofields->seodescription,
         ]);
 
         $viewFile = $model->view ?: 'view';
-        return $this->render($viewFile, ['model' => $model, 'seofields'=>$seofields]);
+        return $this->render($viewFile, [
+            'model'     => $model,
+            'seofields' => $seofields,
+            'workMeta'  => $workMeta,
+        ]);
     }
 
     /**
@@ -117,10 +122,10 @@ class WorkController extends Controller
         $seofields = $model->seofield;
 
         \Yii::$app->view->registerMetaTag([
-            'name' => 'description',
-            'content' => $seofields->seodescription
+            'name'    => 'description',
+            'content' => $seofields->seodescription,
         ]);
 
-        return $this->render('viewCategory', ['model' => $model, 'seofields'=>$seofields]);
+        return $this->render('viewCategory', ['model' => $model, 'seofields' => $seofields]);
     }
 }

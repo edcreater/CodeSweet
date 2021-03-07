@@ -207,6 +207,14 @@ class Work extends ActiveRecord
         return $this->hasOne(Seofield::className(), ['id' => 'seofield_id']);
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function getWorkMeta()
+    {
+        return $this->hasMany(WorkMeta::className(), ['work_id' => 'id']);
+    }
+
 	/**
 	 * @return \yii\db\ActiveQuery
 	 */

@@ -15,6 +15,7 @@ use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use backend\models\search\WorkMetaSearch;
 
 /**
  * WorkController implements the CRUD actions for Work model.
@@ -120,7 +121,11 @@ class WorkController extends Controller
 		$model = $this->findModel($id);
         $seofield = $model->seofield;
 
-		if ($model->load(Yii::$app->request->post()) && $seofield->load(Yii::$app->request->post())) {
+        $searchModel = new WorkMetaSearch();
+        $workMetaProvider = $searchModel->search([]);
+        $workMetaProvider->query->andWhere(['work_id' => $model->id]);
+
+        if ($model->load(Yii::$app->request->post()) && $seofield->load(Yii::$app->request->post())) {
 
             if ($model->save() && $seofield->save()) {
                 return $this->redirect(['index']);
@@ -133,7 +138,8 @@ class WorkController extends Controller
 			return $this->render('update', [
 				'model' => $model,
 				'categories' => WorkCategory::find()->active()->all(),
-			]);
+                'workMetaProvider' => $workMetaProvider
+            ]);
 
 		}
 	}
