@@ -8,7 +8,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.7.2",
     "normalize-scss": "^7.0.1",
-    "prismjs": "^1.21.0"
+    "prismjs": "^1.25.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
