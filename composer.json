@@ -1,6 +1,6 @@
 {
-  "name": "yii2-starter-kit/yii2-starter-kit",
-  "description": "Yii2 Starter Kit Application Template",
+  "name": "CodeSweet",
+  "description": "Website",
   "keywords": [
     "yii2",
     "framework",
@@ -11,16 +11,16 @@
   ],
   "authors": [
     {
-      "name": "Eugene Terentev",
-      "email": "eugene@terentev.net",
-      "homepage": "http://terentev.net"
+      "name": "Yaroslav Popov",
+      "email": "ed.creater@gmail.com",
+      "homepage": "https://codesweet.ru"
     }
   ],
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/yii2-starter-kit/yii2-starter-kit/issues?state=open",
-    "source": "https://github.com/yii2-starter-kit/yii2-starter-kit"
+    "issues": "https://github.com/edcreater/CodeSweet/issues",
+    "source": "https://github.com/edcreater/CodeSweet"
   },
   "require": {
     "php": ">=7.1.0",
