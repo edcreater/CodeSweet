@@ -1,3 +1,5 @@
+@use "../vars";
+
 *,
 *::before,
 *::after {
@@ -5,7 +7,7 @@
 }
 
 html {
-  font-size: $font-size-base;
+  font-size: vars.$font-size-base;
   height: 100%;
 }
 
@@ -13,11 +15,11 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  font-family: $font-family-base;
+  font-family: vars.$font-family-base;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.57;
-  color: $color-text;
+  color: vars.$color-text;
 }
 
 button {
@@ -40,22 +42,22 @@ h6 {
   margin: 0;
   max-height: 1000000px;
   line-height: 1.1;
-  font-family: $font-family-headings;
-  color: $color-accent;
+  font-family: vars.$font-family-headings;
+  color: vars.$color-accent;
 }
 
 b {
-  color: $color-accent;
+  color: vars.$color-accent;
 }
 
 a {
-  color: $color-primary;
+  color: vars.$color-primary;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: $color-secondary;
+    color: vars.$color-secondary;
     text-decoration: underline;
   }
 }

@@ -1,5 +1,7 @@
+@use "../vars";
+
 .footer {
-  background: $color-accent;
+  background: vars.$color-accent;
   color: #fff;
   padding: 25px 0;
 }

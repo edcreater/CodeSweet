@@ -1,4 +1,5 @@
-// h-team
+@use "../vars";
+
 .team-box {
   &__heading {
     display: flex;
@@ -9,7 +10,7 @@
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: $color-accent;
+    color: vars.$color-accent;
     margin: 0 10px 0 0;
   }
 
@@ -36,12 +37,12 @@
 
   &__name {
     font-weight: 700;
-    color: $color-primary;
+    color: vars.$color-primary;
   }
 
   &__position {
     line-height: 1;
-    color: $color-accent;
+    color: vars.$color-accent;
     font-size: 0.75rem;
   }
 }

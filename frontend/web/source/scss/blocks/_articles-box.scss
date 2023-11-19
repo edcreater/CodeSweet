@@ -1,3 +1,5 @@
+@use "../vars";
+
 .articles-box {
   $this: &;
 
@@ -10,7 +12,7 @@
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: $color-accent;
+    color: vars.$color-accent;
     margin: 0 10px 0 0;
   }
 
@@ -19,14 +21,14 @@
     font-size: 0.875rem;
     font-weight: bold;
     position: relative;
-    border-bottom: 1px dashed $color-border;
+    border-bottom: 1px dashed vars.$color-border;
     margin-left: 20px;
     line-height: 1.2;
 
     &:hover,
     &:focus,
     &:active {
-      border-color: $color-link-hover;
+      border-color: vars.$color-link-hover;
       text-decoration: none;
     }
   }
@@ -80,14 +82,14 @@
   &__title {
     font-size: 0.875rem;
     font-weight: bold;
-    color: $color-primary;
+    color: vars.$color-primary;
     line-height: 1.2;
     margin: 0 0 5px;
   }
 
   &__date {
     font-size: 0.75rem;
-    color: $color-accent;
+    color: vars.$color-accent;
   }
 }
 
@@ -100,12 +102,12 @@
   &__title {
     font-size: 1.125rem;
     font-weight: bold;
-    color: $color-primary;
+    color: vars.$color-primary;
     line-height: 1.2;
   }
 
   &__date {
     font-size: 0.75rem;
-    color: $color-accent;
+    color: vars.$color-accent;
   }
 }

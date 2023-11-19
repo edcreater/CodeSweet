@@ -1,8 +1,9 @@
 @use "sass:color";
+@use "../../vars";
 
 .h-team-posts {
   position: relative;
-  background: color.adjust($color-bg-secondary, $alpha: -0.66);
+  background: color.adjust(vars.$color-bg-secondary, $alpha: -0.66);
   margin-top: 60px;
 
   &__bg-top {
@@ -16,7 +17,7 @@
     }
 
     .shape-fill {
-      fill: $color-bg-secondary;
+      fill: vars.$color-bg-secondary;
     }
   }
 

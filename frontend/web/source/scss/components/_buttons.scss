@@ -1,6 +1,5 @@
-/**
- * Buttons
- */
+@use "../vars";
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -18,7 +17,7 @@
 
   &--primary {
     color: #fff;
-    background: $color-primary;
+    background: vars.$color-primary;
     font-size: 0.9rem;
     font-weight: 600;
 
@@ -30,7 +29,7 @@
     &:focus,
     &:active {
       color: #fff;
-      background: $color-accent;
+      background: vars.$color-accent;
     }
   }
 }

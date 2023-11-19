@@ -1,36 +1,33 @@
-@import "~prismjs/themes/prism.css";
-@import "vars";
-
 // Core
-@import "core/base";
-@import "core/commons";
-@import "core/fonts";
+@forward "core/base";
+@forward "core/commons";
+@forward "core/fonts";
 
 // Components
-@import "components/content/index";
-@import "components/inputs";
-@import "components/buttons";
-@import "components/layout";
-@import "components/pagination";
+@forward "components/content/index";
+@forward "components/inputs";
+@forward "components/buttons";
+@forward "components/layout";
+@forward "components/pagination";
 
 // base
-@import "project/footer";
-@import "project/breadcrumbs";
+@forward "project/footer";
+@forward "project/breadcrumbs";
 
 // Blocks
-@import "blocks/header";
-@import "blocks/topmenu";
-@import "blocks/inline-subscribe";
-@import "blocks/works-box";
-@import "blocks/articles-box";
-@import "blocks/team-box";
-@import "blocks/blog-grid";
-@import "blocks/developments-list";
-@import "blocks/sidebar/index";
-@import "blocks/commons/article-meta";
-@import "blocks/commons/metabox";
-@import "blocks/commons/sharebox";
+@forward "blocks/header";
+@forward "blocks/topmenu";
+@forward "blocks/inline-subscribe";
+@forward "blocks/works-box";
+@forward "blocks/articles-box";
+@forward "blocks/team-box";
+@forward "blocks/blog-grid";
+@forward "blocks/developments-list";
+@forward "blocks/sidebar/index";
+@forward "blocks/commons/article-meta";
+@forward "blocks/commons/metabox";
+@forward "blocks/commons/sharebox";
 
 // Pages
-@import "pages/developments";
-@import "pages/home";
+@forward "pages/developments";
+@forward "pages/home";

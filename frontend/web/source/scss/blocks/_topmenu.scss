@@ -1,3 +1,5 @@
+@use "../vars";
+
 .navbar {
   &__toggler {
     cursor: pointer;
@@ -10,12 +12,12 @@
 
     .icon {
       display: block;
-      fill: $color-headings;
+      fill: vars.$color-headings;
     }
 
     &:hover {
       .icon {
-        fill: $color-primary;
+        fill: vars.$color-primary;
       }
     }
   }
@@ -39,7 +41,7 @@
     &:hover {
       > a {
         text-decoration: none;
-        background: url("../img/menu-corner.png") top right no-repeat $color-primary;
+        background: url("../img/menu-corner.png") top right no-repeat vars.$color-primary;
         color: #fff;
         transition: background-color 0.3s ease-in-out;
       }
@@ -60,7 +62,7 @@
     padding: 25px 15px 20px;
     text-transform: uppercase;
     font-size: 15px;
-    color: $color-accent;
+    color: vars.$color-accent;
     box-sizing: border-box;
 
     &:hover,
@@ -125,7 +127,7 @@
       &:hover,
       &:focus,
       &:active {
-        background: $color-primary;
+        background: vars.$color-primary;
         color: #fff;
 
         .icon {

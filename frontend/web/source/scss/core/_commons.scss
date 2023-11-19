@@ -15,11 +15,11 @@
 }
 
 .theme-color {
-  color: $color-primary;
+  color: vars.$color-primary;
 }
 
 .head-color {
-  color: $color-accent;
+  color: vars.$color-accent;
 }
 
 .float-right {
@@ -48,7 +48,7 @@
  * Headings
  */
 .section-heading {
-  font-family: $font-family-headings;
+  font-family: vars.$font-family-headings;
   margin-bottom: 60px;
 
   &__title {
@@ -66,7 +66,7 @@
       bottom: 0;
       width: 65px;
       height: 3px;
-      background: $color-primary;
+      background: vars.$color-primary;
     }
 
     &--centered {
@@ -79,9 +79,9 @@
 
   &__subtitle {
     font-size: 1rem;
-    color: $color-accent;
+    color: vars.$color-accent;
     line-height: 1;
-    font-family: $font-cursive;
+    font-family: vars.$font-cursive;
     font-weight: 300;
     margin-left: 20px;
     margin-bottom: 0;

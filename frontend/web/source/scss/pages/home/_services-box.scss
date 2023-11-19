@@ -1,11 +1,12 @@
 @use "sass:color";
+@use "../../vars";
 
 .h-services {
   border-top-width: 20px !important;
   margin: 20px 0 160px;
   padding-top: 120px;
   position: relative;
-  background: color.adjust($color-bg-secondary, $alpha: -0.66);
+  background: color.adjust(vars.$color-bg-secondary, $alpha: -0.66);
 
   &__bg-top {
     position: absolute;
@@ -18,7 +19,7 @@
     }
 
     .shape-fill {
-      fill: $color-bg-secondary;
+      fill: vars.$color-bg-secondary;
     }
   }
 
@@ -34,7 +35,7 @@
     }
 
     .shape-fill {
-      fill: $color-bg-secondary;
+      fill: vars.$color-bg-secondary;
     }
   }
 

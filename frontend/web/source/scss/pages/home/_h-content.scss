@@ -1,11 +1,10 @@
-/**
- * About section
- */
+@use "../../vars";
+
 .h-content {
   $this: &;
 
   &__title {
-    font-family: $font-family-headings;
+    font-family: vars.$font-family-headings;
     color: #333;
     font-size: 1.6rem;
     font-weight: 900;

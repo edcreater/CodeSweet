@@ -1,3 +1,5 @@
+@use "../../vars";
+
 .metabox {
   margin: 0 0 30px;
 
@@ -8,11 +10,11 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    color: $color-primary;
+    color: vars.$color-primary;
 
     .icon {
       margin-right: 10px;
-      fill: $color-primary;
+      fill: vars.$color-primary;
     }
   }
 
@@ -25,7 +27,7 @@
     background: #fff;
 
     &:nth-of-type(odd) {
-      background: $color-light;
+      background: vars.$color-light;
     }
   }
 

@@ -1,6 +1,4 @@
-/**
- * Blog grid item meta
- */
+@use "../../vars";
 
 .article-meta {
   color: #fff;
@@ -8,7 +6,7 @@
   flex-flow: row wrap;
 
   &__item {
-    background: $color-primary;
+    background: vars.$color-primary;
     color: #fff;
     line-height: 36px;
     height: 36px;
@@ -29,7 +27,7 @@
     justify-content: center;
     font-size: 0.9rem;
     background: #f0f6ff;
-    color: $color-primary;
+    color: vars.$color-primary;
     height: 36px;
     width: 36px;
     text-align: center;
@@ -38,7 +36,7 @@
       display: block;
       width: 16px;
       height: auto;
-      fill: $color-text;
+      fill: vars.$color-text;
     }
   }
 

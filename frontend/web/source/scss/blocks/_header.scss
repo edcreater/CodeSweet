@@ -1,3 +1,5 @@
+@use "../vars";
+
 .header {
   background: #fff;
   position: relative;
@@ -26,13 +28,13 @@
   margin-bottom: 2px;
 
   &__icon {
-    fill: $color-accent;
+    fill: vars.$color-accent;
     margin-right: 5px;
   }
 
   &__tel {
     font-weight: 700;
-    font-family: $font-family-headings;
+    font-family: vars.$font-family-headings;
     line-height: 1;
     text-decoration: none;
 
@@ -70,7 +72,7 @@
     width: 30px;
     height: 30px;
     margin-left: 5px;
-    background: $color-primary;
+    background: vars.$color-primary;
     border-radius: 50%;
 
     .icon {
@@ -88,20 +90,20 @@
 
   &__title {
     padding-top: 10px;
-    font-family: $font-family-headings;
+    font-family: vars.$font-family-headings;
     font-weight: 900;
     line-height: 1;
     font-size: 1.5rem;
 
     &--darked {
-      color: $color-accent;
+      color: vars.$color-accent;
     }
   }
 
   &__subtitle {
-    font-family: $font-cursive;
+    font-family: vars.$font-cursive;
     font-size: 0.8rem;
-    color: $color-text;
+    color: vars.$color-text;
     line-height: 1;
   }
 

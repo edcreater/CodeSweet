@@ -1,8 +1,10 @@
+@use "../../vars";
+
 .s-categories {
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 0 30px -1px rgb(0 0 0 / 11%);
-  background: url("#{$images-path}wave.svg") center bottom no-repeat  #fff;
+  background: url("#{vars.$images-path}wave.svg") center bottom no-repeat  #fff;
   background-size: 100% 50%;
 
   &__heading {
@@ -15,7 +17,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border-left: 2px solid $color-border;
+    border-left: 2px solid vars.$color-border;
   }
 
   &__item {
@@ -34,7 +36,7 @@
     }
 
     &:hover {
-      border-color: $color-secondary;
+      border-color: vars.$color-secondary;
     }
   }
 }

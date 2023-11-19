@@ -1,5 +1,7 @@
+@use "../vars";
+
 .developments-list {
-  background: $color-bg-secondary;
+  background: vars.$color-bg-secondary;
   padding: 60px 0 20px;
   margin-bottom: 200px;
   position: relative;
@@ -11,7 +13,7 @@
     right: 0;
 
     .shape-fill {
-      fill: $color-bg-secondary;
+      fill: vars.$color-bg-secondary;
     }
   }
 
