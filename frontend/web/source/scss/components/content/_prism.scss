@@ -1,0 +1,27 @@
+.content {
+	pre {
+		position: relative;
+	}
+
+	pre>.toolbar {
+		position: absolute;
+		top: .3em;
+		right: .2em;
+		background: #f5f2f0;
+		background: rgb(224 224 224 / 20%);
+		border-radius: .5em;
+	}
+
+	pre>.toolbar a {
+		color: #bbb;
+		font-size: .8em;
+		cursor: pointer;
+		padding: 0 .5em;
+	}
+
+	pre>.toolbar a:hover,
+	pre>.toolbar a:focus,
+	pre>.toolbar a.zeroclipboard-is-hover {
+		color: inherit;
+	}
+}

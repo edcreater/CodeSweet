@@ -17,6 +17,7 @@ use yii\web\YiiAsset;
  */
 class FrontendAsset extends AssetBundle
 {
+
     /**
      * @var string
      */
@@ -26,15 +27,15 @@ class FrontendAsset extends AssetBundle
      * @var array
      */
     public $css = [
-	    'css/app.css',
+        // 'css/app.css',
     ];
 
     /**
      * @var array
      */
     public $js = [
-        'js/app.js',
-        '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604489c4daa6ea82',
+        'https://localhost:8080/app.js',
+        // 'js/app.js',
     ];
 
     /**
@@ -42,7 +43,7 @@ class FrontendAsset extends AssetBundle
      */
     public $depends = [
         YiiAsset::class,
-        //BootstrapAsset::class,
+        // BootstrapAsset::class,
         Html5shiv::class,
     ];
 }

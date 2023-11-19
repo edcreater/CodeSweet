@@ -1,0 +1,25 @@
+@use "sass:color";
+
+$images-path: "../img/";
+$fonts-path: "../fonts/";
+$font-size-base: 17px;
+$color-bg: #f2f2f1;
+$color-bg-secondary: #e8f2ff;
+$color-primary: #e9446e;
+$color-secondary: #52a7ff;
+$color-accent: #3d4255;
+$color-light: #f0f6ff;
+$color-text: #3d4255;
+$color-headings: #1f202b;
+$font-family-base: "PT Sans", "Arial", "Helvetica", sans-serif;
+$font-family-headings: "Intro", "Arial", "Helvetica", sans-serif;
+$font-cursive: "Tinos", cursive;
+$secondary-menu-color: #ada08e;
+$color-link: $color-primary;
+$color-link-hover: color.adjust($color-primary, $lightness: -10%);
+$color-border: #c9cace;
+
+:root {
+  --cs-color-primary: #{$color-primary};
+  --cs-color-bg-secondary: #{$color-bg-secondary};
+}

@@ -1,0 +1,25 @@
+// XS
+$screen-xs: 380px !default;
+$container-xs: $screen-xs !default;
+
+// SM
+$screen-sm: 600px !default;
+$container-sm: $screen-sm !default;
+
+// MD
+$screen-md: 900px !default;
+$container-md: $screen-md !default;
+
+// LG
+$screen-lg: 1200px !default;
+$container-lg: $screen-lg !default;
+
+// XL
+$screen-xl: 1640px !default;
+$container-xl: 1637px !default;
+
+
+// MAX
+$screen-xs-max: ($screen-sm - 1) !default;
+$screen-sm-max: ($screen-md - 1) !default;
+$screen-md-max: ($screen-lg - 1) !default;

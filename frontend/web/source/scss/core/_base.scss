@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: $fontSizeBase;
+  font-size: $font-size-base;
   height: 100%;
 }
 
@@ -13,18 +13,11 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  font-family: $primaryFont;
+  font-family: $font-family-base;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.57;
   color: $color-text;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  //background: url("../img/home.jpg") center top no-repeat;
-}
-
-.wrapper {
-  //opacity: 0.6;
 }
 
 button {
@@ -47,7 +40,7 @@ h6 {
   margin: 0;
   max-height: 1000000px;
   line-height: 1.1;
-  font-family: $fontFamilyHeadings;
+  font-family: $font-family-headings;
   color: $color-accent;
 }
 
@@ -62,7 +55,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $colorSecondary;
+    color: $color-secondary;
     text-decoration: underline;
   }
 }

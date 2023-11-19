@@ -1,3 +1,5 @@
+@use "../../vars";
+
 .illustration {
   margin-bottom: 40px;
   display: flex;
@@ -8,23 +10,18 @@
   margin-top: 60px;
 
   &__image {
-    //border: 1px solid #ededed;
-    //padding: 10px;
     flex: none;
     margin-right: 20px;
     padding-right: 10px;
     max-width: 600px;
     position: relative;
-    border-right: 1px solid $color-primary;
+    border-right: 1px solid vars.$color-primary;
 
     &::before {
       content: "";
       position: absolute;
-      left: -20px;
-      top: -20px;
-      right: 40px;
-      bottom: 40px;
-      background: $colorSecondary;
+      inset: -20px 40px 40px -20px;
+      background: vars.$color-secondary;
       z-index: -1;
     }
   }
@@ -40,11 +37,11 @@
     font-weight: bold;
     margin-top: 30px;
     line-height: 1.2;
-    color: $color-headings;
+    color: vars.$color-headings;
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .illustration {
     flex-flow: column nowrap;
     left: 0;

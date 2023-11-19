@@ -9,9 +9,9 @@ use yii\widgets\Breadcrumbs;
  * Seo metatags
  */
 if ($seofields->seotitle) {
-    $this->title = \Yii::$app->name.' | '.$seofields->seotitle;
+    $this->title = \Yii::$app->name . ' | ' . $seofields->seotitle;
 } else {
-    $this->title = \Yii::$app->name.' | '.$model->title;
+    $this->title = \Yii::$app->name . ' | ' . $model->title;
 }
 if ($seofields->seodescription) {
     $this->registerMetaTag([

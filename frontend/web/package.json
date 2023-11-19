@@ -30,6 +30,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.28",
     "@fortawesome/fontawesome-free": "^5.7.2",
     "prismjs": "^1.29.0"
   },

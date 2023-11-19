@@ -1,5 +1,5 @@
 .developments-list {
-  background: $bgSecondary;
+  background: $color-bg-secondary;
   padding: 60px 0 20px;
   margin-bottom: 200px;
   position: relative;
@@ -11,7 +11,7 @@
     right: 0;
 
     .shape-fill {
-      fill: $bgSecondary;
+      fill: $color-bg-secondary;
     }
   }
 
@@ -46,10 +46,7 @@
       clip-path: url("#developments-list__clipper");
       transition: 0.2s ease-in-out;
       position: relative;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
 
     &::after {
@@ -57,10 +54,7 @@
       clip-path: url("#developments-list__clipper");
       background: #fff;
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       z-index: -1;
     }
   }

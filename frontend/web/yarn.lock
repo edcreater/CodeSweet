@@ -1361,6 +1361,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fancyapps/ui@npm:^5.0.28":
+  version: 5.0.28
+  resolution: "@fancyapps/ui@npm:5.0.28"
+  checksum: da10dfa7b3f7224a5402e70c22b2571cfc2927077078ff2639e35204244bf2f3e54e435291eef75ab59ab6a75e31c1a040d3875af4259ca1cb86f687d8117f43
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-free@npm:^5.7.2":
   version: 5.15.4
   resolution: "@fortawesome/fontawesome-free@npm:5.15.4"
@@ -5631,6 +5638,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.2"
     "@babel/preset-env": "npm:^7.23.2"
+    "@fancyapps/ui": "npm:^5.0.28"
     "@fortawesome/fontawesome-free": "npm:^5.7.2"
     autoprefixer: "npm:^10.4.16"
     babel-loader: "npm:^9.1.3"

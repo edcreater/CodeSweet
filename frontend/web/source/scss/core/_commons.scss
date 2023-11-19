@@ -1,3 +1,5 @@
+@use "../vars";
+
 #svg-icons-set {
   display: none;
 }
@@ -9,7 +11,7 @@
 }
 
 .clearfix {
-  @include clearfix();
+  @include vars.clearfix;
 }
 
 .theme-color {
@@ -36,11 +38,8 @@
   }
 
   &::before {
-    top: 50%;
-    bottom: 0;
-    left: 15%;
-    right: 15%;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+    inset: 50% 15% 0;
+    box-shadow: 0 0 35px rgb(0 0 0 / 30%);
     border-radius: 25%/10px;
   }
 }
@@ -49,7 +48,7 @@
  * Headings
  */
 .section-heading {
-  font-family: $fontFamilyHeadings;
+  font-family: $font-family-headings;
   margin-bottom: 60px;
 
   &__title {
@@ -82,7 +81,7 @@
     font-size: 1rem;
     color: $color-accent;
     line-height: 1;
-    font-family: $fontCursive;
+    font-family: $font-cursive;
     font-weight: 300;
     margin-left: 20px;
     margin-bottom: 0;

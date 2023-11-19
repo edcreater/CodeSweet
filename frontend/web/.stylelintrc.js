@@ -1,6 +1,8 @@
 module.exports = {
-  'extends': 'stylelint-config-standard',
+  'extends': 'stylelint-config-standard-scss',
   'rules': {
+		'declaration-block-trailing-semicolon': 'always',
+    'selector-pseudo-class-no-unknown': null,
     "no-descending-specificity": null,
     'no-empty-source': null,
     'string-quotes': 'double',
@@ -28,8 +30,13 @@ module.exports = {
           'responsive',
           'variants',
           'screen',
+          'use',
+		  'forward'
         ],
       },
     ],
+	'selector-type-no-unknown': [true, {
+      ignore: ["custom-elements", "default-namespace"],
+    }]
   },
 };

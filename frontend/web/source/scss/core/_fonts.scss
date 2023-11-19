@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Tinos:400,400i");
+@import "https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic";
+@import "https://fonts.googleapis.com/css?family=Tinos:400,400i";
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introblack-webfont.woff2") format("woff2"),
     url("../fonts/introblack-webfont.woff") format("woff");
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introbold-webfont.woff2") format("woff2"),
     url("../fonts/introbold-webfont.woff") format("woff");
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introbook-webfont.woff2") format("woff2"),
     url("../fonts/introbook-webfont.woff") format("woff");
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introregular-webfont.woff2") format("woff2"),
     url("../fonts/introregular-webfont.woff") format("woff");
@@ -38,7 +38,7 @@
 }
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introlight-webfont.woff2") format("woff2"),
     url("../fonts/introlight-webfont.woff") format("woff");
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: "Intro";
+  font-family: Intro;
   src:
     url("../fonts/introthin-webfont.woff2") format("woff2"),
     url("../fonts/introthin-webfont.woff") format("woff");

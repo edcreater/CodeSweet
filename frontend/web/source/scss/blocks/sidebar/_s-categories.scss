@@ -1,7 +1,7 @@
 .s-categories {
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 0 30px -1px rgb(0 0 0 / 11%);
   background: url("#{$images-path}wave.svg") center bottom no-repeat  #fff;
   background-size: 100% 50%;
 
@@ -15,7 +15,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border-left: 2px solid $colorBorder;
+    border-left: 2px solid $color-border;
   }
 
   &__item {
@@ -34,7 +34,7 @@
     }
 
     &:hover {
-      border-color: $colorSecondary;
+      border-color: $color-secondary;
     }
   }
 }

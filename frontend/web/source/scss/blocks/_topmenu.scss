@@ -39,7 +39,7 @@
     &:hover {
       > a {
         text-decoration: none;
-        background: url(../img/menu-corner.png) top right no-repeat $color-primary;
+        background: url("../img/menu-corner.png") top right no-repeat $color-primary;
         color: #fff;
         transition: background-color 0.3s ease-in-out;
       }
@@ -56,7 +56,6 @@
   }
 
   a {
-    vertical-align: middle;
     display: block;
     padding: 25px 15px 20px;
     text-transform: uppercase;
@@ -96,13 +95,13 @@
     margin: 0;
     top: 100%;
     left: 0;
-    background: url(../img/submenu-top.png) top left repeat-x;
+    background: url("../img/submenu-top.png") top left repeat-x;
     transition: opacity 0.3s ease-in-out;
 
     li {
       margin: 3px 0 0;
       width: 100%;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%) inset;
 
       &:first-child {
         margin-top: 8px;
@@ -145,7 +144,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .navbar {
     position: relative;
 
@@ -160,7 +159,7 @@
 
       &.active {
         transform: translate3d(0, 0, 0);
-        box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 30px -1px rgb(0 0 0 / 8%);
       }
     }
 
@@ -218,7 +217,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .navbar {
     &__inner {
       width: 100%;

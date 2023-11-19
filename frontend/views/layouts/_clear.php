@@ -1,15 +1,17 @@
 <?php
 use yii\helpers\Html;
-/* @var $this \yii\web\View */
+
+/*
+@var $this \yii\web\View */
 /* @var $content string */
 
 \frontend\assets\FrontendAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?php echo Yii::$app->language ?>">
+<html lang="<?php echo Yii::$app->language; ?>">
 <head>
-    <meta charset="<?php echo Yii::$app->charset ?>"/>
+    <meta charset="<?php echo Yii::$app->charset; ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="google-site-verification" content="y6i4FvC23p1Fj7D8FXBAjj8NLvFwNFQtWl6cFR3zIM8" />
@@ -25,60 +27,17 @@ use yii\helpers\Html;
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <title><?php echo Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-    <?php echo Html::csrfMetaTags() ?>
-
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-		(function (d, w, c) {
-			(w[c] = w[c] || []).push(function() {
-				try {
-					w.yaCounter30164969 = new Ya.Metrika({
-						id:30164969,
-						clickmap:true,
-						trackLinks:true,
-						accurateTrackBounce:true
-					});
-				} catch(e) { }
-			});
-
-			var n = d.getElementsByTagName("script")[0],
-				s = d.createElement("script"),
-				f = function () { n.parentNode.insertBefore(s, n); };
-			s.type = "text/javascript";
-			s.async = true;
-			s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-			if (w.opera == "[object Opera]") {
-				d.addEventListener("DOMContentLoaded", f, false);
-			} else { f(); }
-		})(document, window, "yandex_metrika_callbacks");
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/30164969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75288557-1">
-	</script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-75288557-1');
-	</script>
-	
-	<script data-ad-client="ca-pub-9493950254006774" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title><?php echo Html::encode($this->title); ?></title>
+    <?php $this->head(); ?>
+    <?php echo Html::csrfMetaTags(); ?>
 
 </head>
 <body>
-<?php $this->beginBody() ?>
-    <?php echo $content ?>
-<?php $this->endBody() ?>
-<script src="/app.js"></script>
+<?php $this->beginBody(); ?>
+    <?php echo $content; ?>
+<?php $this->endBody(); ?>
 
-<?php include(Yii::getAlias('@frontend/web/images/default.svg')); ?>
+<?php require Yii::getAlias('@frontend/web/images/default.svg'); ?>
 </body>
 </html>
-<?php $this->endPage() ?>
+<?php $this->endPage(); ?>

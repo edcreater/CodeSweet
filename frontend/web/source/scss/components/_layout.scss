@@ -1,3 +1,5 @@
+@use "../vars";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -20,9 +22,9 @@
   padding-right: 60px;
   margin: 0 auto;
 
-  @include r(1230) {
-    width: 100%;
-  }
+	@media (max-width: vars.$screen-lg) {
+		width: 100%;
+	}
 
   &--small {
     max-width: 970px;
@@ -41,14 +43,11 @@
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: -1;
-    background: url(../img/pattern.png);
+    background: url("../img/pattern.png");
     background-repeat: repeat;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0 0 0 / 30%);
   }
 
   &__inner {
@@ -70,7 +69,7 @@
   &__subtitle {
     display: inline-block;
     text-transform: lowercase;
-    font-family: $fontCursive;
+    font-family: $font-cursive;
     font-size: 0.925rem;
     background: $color-primary;
     padding: 2px 18px;
@@ -89,23 +88,19 @@
 
   padding: 60px 0 80px;
 
-  &__content {
-    //
-  }
-
   &--sideright {
     display: flex;
     flex-flow: row wrap;
 
     #{$this}__content {
-      flex: 0 0 66.666666%;
-      width: 66.666666%;
+      flex: 0 0 66.6666%;
+      width: 66.6666%;
     }
 
     #{$this}__sidebar {
       padding-left: 60px;
-      flex: 0 0 33.333333%;
-      width: 33.333333%;
+      flex: 0 0 33.3333%;
+      width: 33.3333%;
     }
   }
 }
@@ -131,7 +126,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .layout {
     $this: &;
 
@@ -155,7 +150,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .layout {
     $this: &;
 
@@ -199,7 +194,7 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (width <= 520px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;

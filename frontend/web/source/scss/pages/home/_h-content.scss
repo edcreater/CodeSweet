@@ -5,7 +5,7 @@
   $this: &;
 
   &__title {
-    font-family: $fontFamilyHeadings;
+    font-family: $font-family-headings;
     color: #333;
     font-size: 1.6rem;
     font-weight: 900;
@@ -30,7 +30,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .h-content {
     $this: &;
 

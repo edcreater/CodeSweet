@@ -6,7 +6,7 @@
   &__inner {
     display: flex;
     flex-flow: row wrap;
-    box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 30px -1px rgb(0 0 0 / 8%);
     position: relative;
   }
 
@@ -35,14 +35,14 @@
   &__title {
     font-size: 1.75rem;
     font-weight: 900;
-    font-family: $fontFamilyHeadings;
+    font-family: $font-family-headings;
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 15px;
   }
 
   &__subtitle {
-    font-family: $fontCursive;
+    font-family: $font-cursive;
     line-height: 1.2;
   }
 
@@ -59,8 +59,8 @@
   }
 
   &__item {
-    max-width: 33.333333%;
-    flex: 0 0 33.333333%;
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
   }
 }
 
@@ -72,7 +72,7 @@
   }
 
   &__title {
-    font-family: $fontFamilyHeadings;
+    font-family: $font-family-headings;
     font-size: 2rem;
     line-height: 1;
     font-weight: 900;
@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .info-numbers {
     &__heading {
       max-width: 100%;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .info-numbers {
     &__item {
       max-width: 100%;

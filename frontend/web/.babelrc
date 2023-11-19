@@ -9,7 +9,7 @@
 		  "scss"
 		],
 		"plugins": ["line-numbers"],
-		"theme": "twilight",
+		"theme": "default",
 		"css": true
 	}]
   ]

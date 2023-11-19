@@ -1,0 +1,42 @@
+@mixin scrollbar {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--cs-color-bg-secondary);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: var(--cs-color-primary);
+  }
+}
+
+@mixin clearfix {
+  &::before,
+  &::after{
+    content: " ";
+    display: table;
+  }
+
+  &::after{
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+
+  &{
+    *zoom: 1;
+  }
+}
+
+@mixin placeholder {
+  :placeholder {@content; }
+}

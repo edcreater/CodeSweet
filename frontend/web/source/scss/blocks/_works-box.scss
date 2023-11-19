@@ -3,8 +3,8 @@
   flex-flow: row wrap;
 
   &__item {
-    max-width: (100%/4);
-    flex: 0 0 (100%/4);
+    max-width: calc(100% / 4);
+    flex: 0 0 calc(100% / 4);
     padding: 10px;
   }
 }
@@ -18,12 +18,12 @@
     height: 100%;
     overflow: hidden;
     padding: 10px;
-    border: 1px solid $colorBg;
-    box-shadow: 0 0 30px -1px rgba(0, 0, 0, 0.11);
+    border: 1px solid $color-bg;
+    box-shadow: 0 0 30px -1px rgb(0 0 0 / 11%);
   }
 
   &__title {
-    padding: 15px 20px 10px 20px;
+    padding: 15px 20px 10px;
     line-height: 1.1;
     transform: translateY(0);
     transition: 0.3s ease-in-out;
@@ -45,10 +45,7 @@
       content: "";
       position: absolute;
       z-index: 1;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
   }
 
@@ -65,20 +62,20 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .works-box {
     &__item {
-      max-width: (100%/2);
-      flex: 0 0 (100%/2);
+      max-width: calc(100% / 2);
+      flex: 0 0 calc(100% / 2);
     }
   }
 }
 
-@media (max-width: 520px) {
+@media (width <= 520px) {
   .works-box {
     &__item {
-      max-width: (100%);
-      flex: 0 0 (100%);
+      max-width: 100%;
+      flex: 0 0 100%;
     }
   }
 }

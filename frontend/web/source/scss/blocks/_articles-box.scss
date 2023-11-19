@@ -19,14 +19,14 @@
     font-size: 0.875rem;
     font-weight: bold;
     position: relative;
-    border-bottom: 1px dashed $colorBorder;
+    border-bottom: 1px dashed $color-border;
     margin-left: 20px;
     line-height: 1.2;
 
     &:hover,
     &:focus,
     &:active {
-      border-color: $colorLinkHover;
+      border-color: $color-link-hover;
       text-decoration: none;
     }
   }
@@ -49,7 +49,7 @@
     padding: 0 12px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (width <= 768px) {
     &__columns {
       flex-flow: row wrap;
     }
