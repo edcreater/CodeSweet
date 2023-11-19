@@ -6,6 +6,9 @@
 composer.phar
 
 # JS
+.yarn
+frontend/web/.pnp.cjs
+frontend/web/.pnp.loader.mjs
 node_modules
 spa/npm-debug.log
 spa/yarn-error.log

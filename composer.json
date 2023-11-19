@@ -1,5 +1,5 @@
 {
-  "name": "CodeSweet",
+  "name": "edcreater/codesweet",
   "description": "Website",
   "keywords": [
     "yii2",
@@ -68,7 +68,10 @@
   },
   "config": {
     "process-timeout": 1800,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
   },
   "repositories": [
     {
