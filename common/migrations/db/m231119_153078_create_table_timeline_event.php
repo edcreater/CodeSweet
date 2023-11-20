@@ -2,23 +2,36 @@
 
 use yii\db\Migration;
 
-class m150414_195800_timeline_event extends Migration
+/**
+ * Handles the creation for table `{{%timeline_event}}`.
+ */
+class m231119_153078_create_table_timeline_event extends Migration
 {
+
+    /** @var string  */
+    protected $tableName = '{{%timeline_event}}';
+
     /**
-     * @return bool|void
+     * @inheritdoc
      */
     public function safeUp()
     {
-        $this->createTable('{{%timeline_event}}', [
-            'id' => $this->primaryKey(),
+        $collation = null;
+        if ($this->db->driverName === 'mysql') {
+            $collation = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+        }
+
+        $this->createTable($this->tableName, [
+            'id' => $this->primaryKey()->notNull(),
             'application' => $this->string(64)->notNull(),
             'category' => $this->string(64)->notNull(),
             'event' => $this->string(64)->notNull(),
             'data' => $this->text(),
-            'created_at' => $this->integer()->notNull()
-        ]);
+            'created_at' => $this->integer(11)->notNull(),
+        ], $collation);
 
-        $this->createIndex('idx_created_at', '{{%timeline_event}}', 'created_at');
+
+        $this->createIndex('idx_created_at', $this->tableName, 'created_at');
 
         $this->batchInsert(
             '{{%timeline_event}}',
@@ -32,10 +45,11 @@ class m150414_195800_timeline_event extends Migration
     }
 
     /**
-     * @return bool|void
+     * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
-        $this->dropTable('{{%timeline_event}}');
+        $this->dropIndex('idx_created_at', $this->tableName);
+        $this->dropTable($this->tableName);
     }
 }

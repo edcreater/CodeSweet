@@ -20,6 +20,6 @@ return [
             'migrationPath' => '@common/migrations/rbac/',
             'migrationTable' => '{{%system_rbac_migration}}',
             'templateFile' => '@common/rbac/views/migration.php'
-        ],
+        ]
     ],
 ];
